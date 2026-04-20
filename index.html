@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sardar Ali Shaik — Program Manager | Senior Scrum Master | Agile Delivery Leader</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:     #0B1829;
+    --midnight: #071120;
+    --gold:     #C9A84C;
+    --gold-lt:  #E8C97A;
+    --gold-dim: #7A5E22;
+    --ice:      #D6E8F7;
+    --ice-dim:  #8BAFC8;
+    --white:    #F5F0E8;
+    --muted:    #8899AA;
+    --card:     #0F2238;
+    --card2:    #132840;
+    --accent:   #3A7BD5;
+    --green:    #2ECC8A;
+    --green-dim:#1A7A52;
+    --red-soft: #E05252;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--midnight);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0; opacity: 0.4;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .mono  { font-family: 'Space Mono', monospace; }
+  h1,h2,h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: -0.02em; }
+
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto;
+  }
+
+  /* ═══ NAV ═══ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(7,17,32,0.88);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    transition: all 0.3s;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.1em; text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.3s; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ═══ HERO ═══ */
+  #hero {
+    position: relative; min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 100px 40px 80px;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, #1a3a6028 0%, transparent 70%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, #C9A84C0C 0%, transparent 60%),
+      linear-gradient(180deg, #071120 0%, #0B1829 60%, #071120 100%);
+    overflow: hidden;
+  }
+  #hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 40% at 50% 110%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .grid-lines {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    animation: gridDrift 28s linear infinite;
+  }
+  @keyframes gridDrift {
+    0%   { transform: translate(0,0); }
+    100% { transform: translate(64px,64px); }
+  }
+
+  /* 3D floating orbs */
+  .orb {
+    position: absolute; border-radius: 50%;
+    filter: blur(80px); pointer-events: none; opacity: 0;
+    animation: orbFloat 0.8s 0.3s forwards;
+  }
+  .orb-1 { width: 400px; height: 400px; background: rgba(58,123,213,0.07); top: -100px; left: -100px; animation-delay: 0.1s; }
+  .orb-2 { width: 300px; height: 300px; background: rgba(201,168,76,0.05); bottom: -80px; right: -80px; animation-delay: 0.3s; }
+  .orb-3 { width: 200px; height: 200px; background: rgba(46,204,138,0.04); top: 40%; left: 10%; animation-delay: 0.5s; }
+  @keyframes orbFloat {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+/* ── HERO EYEBROW PILL ── */
+  .hero-eyebrow {
+    margin-bottom: 24px; opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+    display: flex; justify-content: center;
+  }
+  .hero-eyebrow-pill {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 6px 20px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 100px;
+    position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.35s cubic-bezier(0.34,1.2,0.64,1), box-shadow 0.35s, border-color 0.25s;
+    box-shadow:
+      0 3px 10px rgba(0,0,0,0.3),
+      0 0 16px rgba(201,168,76,0.08),
+      inset 0 1px 0 rgba(201,168,76,0.2),
+      inset 0 -1px 0 rgba(0,0,0,0.2);
+    cursor: default;
+  }
+  /* Shimmer sweep */
+  .hero-eyebrow-pill::after {
+    content: '';
+    position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    animation: shimmer 3.5s infinite;
+  }
+  @keyframes shimmer {
+    0%   { left: -100%; }
+    100% { left: 200%; }
+  }
+  .hero-eyebrow-pill:hover {
+    transform: translateY(-3px) scale(1.04);
+    border-color: rgba(201,168,76,0.55);
+    box-shadow:
+      0 8px 24px rgba(0,0,0,0.45),
+      0 0 24px rgba(201,168,76,0.15),
+      inset 0 1px 0 rgba(201,168,76,0.3);
+  }
+  .hero-eyebrow-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 6px rgba(201,168,76,0.7);
+    animation: pulseDot 2s ease-in-out infinite;
+  }
+  @keyframes pulseDot {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(0.7); }
+  }
+  .hero-eyebrow-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.45em; color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 92px);
+    font-weight: 700; color: var(--white);
+    line-height: 0.92; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0; opacity: 0;
+    animation: fadeUp 0.9s 0.35s forwards;
+    text-shadow: 0 0 80px rgba(201,168,76,0.15), 0 8px 32px rgba(0,0,0,0.5);
+  }
+  .hero-name-accent { color: var(--gold); }
+
+  /* Strong tagline */
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(15px, 2vw, 21px);
+    font-weight: 300; font-style: italic;
+    color: var(--ice-dim);
+    letter-spacing: 0.04em;
+    margin: 20px 0 10px;
+    max-width: 780px;
+    opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
+    line-height: 1.5;
+  }
+
+  .hero-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(12px, 1.6vw, 15px); font-weight: 500;
+    color: var(--muted); letter-spacing: 0.1em;
+    margin: 12px 0 22px; opacity: 0;
+    animation: fadeUp 0.9s 0.6s forwards;
+  }
+  .hero-title span { color: var(--ice-dim); }
+
+  .cert-strip {
+    margin: 18px 0 28px;
+    opacity: 0; animation: fadeUp 0.9s 0.7s forwards;
+  }
+  .cert-strip > .cert-label { margin-bottom: 8px; }
+  .cert-strip-badges {
+    display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  }
+  /* 3D certification card */
+  .cert-badge {
+    display: inline-flex; flex-direction: column;
+    align-items: center; gap: 5px;
+    padding: 10px 14px 9px;
+    background: linear-gradient(160deg, rgba(18,38,62,0.96), rgba(9,19,36,0.99));
+    border: 1px solid rgba(201,168,76,0.22);
+    border-radius: 4px;
+    position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.32s cubic-bezier(0.34,1.2,0.64,1), box-shadow 0.32s, border-color 0.25s;
+    box-shadow:
+      0 4px 12px rgba(0,0,0,0.35),
+      0 0 8px rgba(201,168,76,0.05),
+      inset 0 1px 0 rgba(201,168,76,0.08);
+    cursor: default;
+    min-width: 72px;
+    text-align: center;
+  }
+  .cert-badge::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .cert-badge:hover {
+    transform: translateY(-5px) rotateX(6deg);
+    border-color: rgba(201,168,76,0.45);
+    box-shadow:
+      0 14px 32px rgba(0,0,0,0.5),
+      0 0 18px rgba(201,168,76,0.12),
+      inset 0 1px 0 rgba(201,168,76,0.15);
+  }
+  .cert-badge:hover::before { opacity: 1; }
+  .cert-badge-icon {
+    font-size: 18px; line-height: 1;
+    filter: drop-shadow(0 0 6px rgba(201,168,76,0.3));
+    transition: transform 0.32s;
+  }
+  .cert-badge:hover .cert-badge-icon { transform: scale(1.15); }
+  .cert-badge-text {
+    font-family: 'Space Mono', monospace; font-size: 9px;
+    letter-spacing: 0.08em; color: var(--gold-lt);
+    font-weight: 700; line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .hero-contact {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    justify-content: center; font-size: 13px;
+    color: var(--muted); margin-bottom: 40px;
+    opacity: 0; animation: fadeUp 0.9s 0.8s forwards;
+  }
+  .hero-contact-line1 {
+    display: flex; gap: 20px; align-items: center;
+    flex-wrap: nowrap; white-space: nowrap;
+  }
+  .hero-contact-line2 {
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-size: 12px; color: var(--muted); letter-spacing: 0.02em;
+  }
+  .hero-contact a {
+    color: var(--ice-dim); text-decoration: none; transition: color 0.3s;
+    white-space: nowrap;
+  }
+  .hero-contact a:hover { color: var(--gold); }
+  .contact-sep { color: rgba(201,168,76,0.35); font-size: 14px; }
+
+  /* 3D Hero Metrics */
+  .hero-metrics {
+    display: grid; grid-template-columns: repeat(5,1fr);
+    gap: 3px;
+    width: 100%; max-width: 940px;
+    opacity: 0; animation: fadeUp 1s 1s forwards;
+    perspective: 1000px;
+  }
+  .hero-metric {
+    background: linear-gradient(145deg, rgba(15,34,56,0.95), rgba(11,24,41,0.98));
+    padding: 22px 12px 18px;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.15);
+    transition: transform 0.4s, background 0.3s, box-shadow 0.4s;
+    transform-style: preserve-3d;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-metric::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .hero-metric:hover {
+    transform: translateY(-8px) rotateX(6deg);
+    background: linear-gradient(145deg, rgba(25,50,80,0.95), rgba(15,34,56,0.98));
+    box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 28px rgba(201,168,76,0.15), inset 0 1px 0 rgba(201,168,76,0.1);
+  }
+  .hero-metric:hover::before { opacity: 1; }
+
+  .metric-top-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 8.5px; letter-spacing: 0.12em;
+    color: var(--muted); text-transform: uppercase;
+    margin-bottom: 6px; display: block; line-height: 1.3;
+  }
+  .hero-metric-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px; font-weight: 700; color: var(--gold);
+    line-height: 1; display: block;
+  }
+  .metric-sub-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px; letter-spacing: 0.1em;
+    color: var(--green); text-transform: uppercase;
+    margin-top: 5px; display: block; line-height: 1.3;
+  }
+  .metric-sub-label.reduction { color: #E88C3A; }
+
+
+  /* ── 3D PREMIUM BUTTONS ── */
+  .btn-3d {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 800;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 14px 30px; text-decoration: none; cursor: pointer;
+    border: none; border-radius: 3px;
+    position: relative; overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s;
+    transform-style: preserve-3d;
+    white-space: nowrap;
+  }
+  .btn-3d::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+    border-radius: 3px; pointer-events: none;
+  }
+  .btn-3d:hover { transform: translateY(-4px) scale(1.03); }
+  .btn-3d:active { transform: translateY(0) scale(0.98); }
+
+  .btn-3d-gold {
+    background: linear-gradient(145deg, #d4a832, #c9a84c, #a8872c);
+    color: #071120;
+    box-shadow:
+      0 6px 0 #7a5e22,
+      0 8px 20px rgba(201,168,76,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .btn-3d-gold:hover {
+    box-shadow:
+      0 10px 0 #7a5e22,
+      0 14px 32px rgba(201,168,76,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+  .btn-3d-gold:active { box-shadow: 0 2px 0 #7a5e22, 0 4px 12px rgba(201,168,76,0.3); }
+
+  .btn-3d-outline {
+    background: linear-gradient(145deg, rgba(20,40,65,0.9), rgba(11,24,41,0.95));
+    color: var(--gold-lt);
+    border: 1px solid var(--gold-dim);
+    box-shadow:
+      0 6px 0 rgba(0,0,0,0.5),
+      0 8px 20px rgba(0,0,0,0.3),
+      inset 0 1px 0 rgba(201,168,76,0.15);
+  }
+  .btn-3d-outline:hover {
+    background: linear-gradient(145deg, rgba(30,55,85,0.95), rgba(15,34,56,0.98));
+    border-color: var(--gold);
+    color: var(--gold);
+    box-shadow:
+      0 10px 0 rgba(0,0,0,0.5),
+      0 14px 32px rgba(201,168,76,0.2),
+      inset 0 1px 0 rgba(201,168,76,0.25);
+  }
+
+  .hero-btn-row {
+    display: flex; gap: 14px; justify-content: center;
+    flex-wrap: wrap; margin-bottom: 40px;
+    opacity: 0; animation: fadeUp 0.9s 0.88s forwards;
+  }
+
+    .hero-desc-body-card { grid-row: 1; }
+    .hero-desc-tagline-card { grid-column: 1; grid-row: 2; }
+    .hero-desc-cta-card { grid-column: 1; grid-row: 3; }
+  }
+
+  /* ── CERT LABEL ── */
+  .cert-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.52em;
+    color: var(--ice-dim);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  /* ── ONE-LINE LOCATION ── */
+  .hero-location-line {
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .contact-one-line {
+    white-space: nowrap;
+  }
+
+  /* ── METRIC 3D GLOW ── */
+  .hero-metric-val {
+    text-shadow: 0 0 20px rgba(201,168,76,0.4), 0 2px 8px rgba(0,0,0,0.5);
+  }
+  .metric-val {
+    text-shadow: 0 0 16px rgba(201,168,76,0.3), 0 2px 6px rgba(0,0,0,0.4);
+  }
+
+
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(26px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ═══ SECTIONS ═══ */
+  section { position: relative; padding: 96px 0; z-index: 1; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+
+  .section-label {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    letter-spacing: 0.45em; color: var(--gold); text-transform: uppercase;
+    margin-bottom: 12px; display: block;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4.5vw, 58px);
+    font-weight: 300; color: var(--white); line-height: 1.1;
+    margin-bottom: 56px;
+  }
+  .section-title em { color: var(--gold); font-style: italic; }
+
+  /* ═══ WHY HIRE ME ═══ */
+  #why {
+    background: linear-gradient(135deg, #0a1e36 0%, #071120 50%, #0d1f38 100%);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .why-grid {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 20px;
+    perspective: 1200px;
+  }
+
+  .why-card {
+    background: linear-gradient(145deg, var(--card) 0%, #0d1f35 100%);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 40px 32px; text-align: center;
+    position: relative; overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s, border-color 0.3s;
+    transform-style: preserve-3d;
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .why-card.visible { opacity: 1; transform: translateY(0); }
+  .why-card:hover {
+    transform: translateY(-8px) rotateX(4deg) rotateY(-2deg);
+    box-shadow: 0 24px 56px rgba(0,0,0,0.45), 0 0 30px rgba(201,168,76,0.1);
+    border-color: rgba(201,168,76,0.35);
+  }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
+  }
+  .why-card::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.04) 0%, transparent 70%);
+  }
+  .why-icon { font-size: 36px; margin-bottom: 18px; display: block; position: relative; z-index: 1; }
+  .why-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700;
+    color: var(--gold-lt); margin-bottom: 14px; position: relative; z-index: 1;
+  }
+  .why-text { font-size: 14px; color: var(--ice-dim); line-height: 1.7; position: relative; z-index: 1; }
+  .why-text strong { color: var(--white); font-weight: 600; }
+
+  .why-statement {
+    margin-top: 56px; text-align: center;
+    padding: 36px 48px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.07), rgba(58,123,213,0.05));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px; position: relative; overflow: hidden;
+  }
+  .why-statement::before {
+    content: '\201C'; position: absolute; top: -20px; left: 24px;
+    font-family: 'Cormorant Garamond', serif; font-size: 120px;
+    color: rgba(201,168,76,0.08); line-height: 1; pointer-events: none;
+  }
+  .why-statement p {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 400; font-style: italic; color: var(--white);
+    line-height: 1.6; position: relative; z-index: 1;
+  }
+  .why-statement p strong { color: var(--gold); font-style: normal; font-weight: 700; }
+
+  /* ═══ SUMMARY ═══ */
+  #summary {
+    background: var(--navy);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+  .summary-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+  }
+  .summary-text {
+    font-size: 16px; line-height: 1.88; color: var(--ice); font-weight: 300;
+  }
+  .summary-text strong { color: var(--gold-lt); font-weight: 600; }
+  .summary-pillars { display: flex; flex-direction: column; gap: 18px; }
+  .pillar {
+    border-left: 2px solid var(--gold); padding: 16px 22px;
+    background: linear-gradient(90deg, rgba(201,168,76,0.05), rgba(201,168,76,0.01));
+    border-radius: 0 4px 4px 0;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .pillar:hover {
+    background: linear-gradient(90deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03));
+    transform: translateX(4px);
+  }
+  .pillar-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 19px;
+    font-weight: 700; color: var(--gold-lt); margin-bottom: 4px;
+  }
+  .pillar-desc { font-size: 13px; color: var(--ice-dim); line-height: 1.6; }
+
+  /* ═══ METRICS BAND ═══ */
+  .metrics-band {
+    display: grid; grid-template-columns: repeat(5,1fr);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    background: var(--midnight);
+    perspective: 1000px;
+  }
+  .metric-cell {
+    padding: 36px 16px; text-align: center;
+    border-right: 1px solid rgba(201,168,76,0.1);
+    transition: background 0.3s, transform 0.4s;
+    transform-style: preserve-3d;
+  }
+  .metric-cell:last-child { border-right: none; }
+  .metric-cell:hover {
+    background: rgba(201,168,76,0.06);
+    transform: translateY(-6px) rotateX(8deg);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.4), 0 0 20px rgba(201,168,76,0.1);
+  }
+  .metric-top { font-size: 10px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 6px; font-family: 'Space Mono', monospace; line-height: 1.3; }
+  .metric-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px; font-weight: 700; color: var(--gold);
+    line-height: 1; display: block;
+  }
+  .metric-arrow-up   { color: var(--green); }
+  .metric-arrow-down { color: #E88C3A; }
+  .metric-bottom {
+    font-size: 9px; color: var(--green); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-top: 6px; display: block;
+    font-family: 'Space Mono', monospace; line-height: 1.3;
+  }
+  .metric-bottom.red { color: #E88C3A; }
+
+  /* ═══ CAREER ═══ */
+  #career { background: var(--midnight); }
+  .timeline { position: relative; padding-left: 40px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, var(--gold) 0%, rgba(201,168,76,0.08) 100%);
+  }
+  .timeline-item {
+    position: relative; margin-bottom: 56px;
+    opacity: 0; transform: translateX(-20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .timeline-item.visible { opacity: 1; transform: translateX(0); }
+  .timeline-dot {
+    position: absolute; left: -47px; top: 6px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--midnight);
+    box-shadow: 0 0 0 4px rgba(201,168,76,0.18), 0 0 20px rgba(201,168,76,0.2);
+  }
+  .timeline-period {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; color: var(--gold-dim); margin-bottom: 7px; text-transform: uppercase;
+  }
+  .timeline-role {
+    font-family: 'Cormorant Garamond', serif; font-size: 26px;
+    font-weight: 700; color: var(--white); margin-bottom: 3px;
+  }
+  .timeline-company {
+    font-size: 13px; color: var(--gold-lt); margin-bottom: 16px;
+    font-weight: 500; letter-spacing: 0.03em;
+  }
+  .timeline-body {
+    background: linear-gradient(145deg, var(--card), #0d1f35);
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 4px; padding: 28px 32px;
+    transform-style: preserve-3d;
+    transition: box-shadow 0.4s, border-color 0.3s;
+  }
+  .timeline-body:hover {
+    box-shadow: 0 16px 48px rgba(0,0,0,0.35), 0 0 24px rgba(201,168,76,0.06);
+    border-color: rgba(201,168,76,0.22);
+  }
+  .timeline-highlights {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+  }
+  .highlight-chip {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    background: rgba(46,204,138,0.1); color: var(--green);
+    border: 1px solid rgba(46,204,138,0.25); padding: 4px 12px;
+    border-radius: 2px; letter-spacing: 0.04em;
+  }
+  .timeline-bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .timeline-bullets li {
+    font-size: 14px; color: var(--ice-dim); line-height: 1.62;
+    padding-left: 20px; position: relative;
+  }
+  .timeline-bullets li::before {
+    content: '▸'; position: absolute; left: 0; color: var(--gold); font-size: 11px; top: 2px;
+  }
+
+  /* ═══ PROGRAMS ═══ */
+  #programs { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .programs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .program-card {
+    background: linear-gradient(145deg, var(--card2), #0a1825);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 4px; padding: 32px 28px;
+    position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.4s, box-shadow 0.4s, border-color 0.3s;
+    opacity: 0; transform: translateY(24px) rotateX(6deg);
+  }
+  .program-card.visible { opacity: 1; transform: translateY(0) rotateX(0); }
+  .program-card:hover {
+    transform: translateY(-8px) rotateX(4deg);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.45), 0 0 30px rgba(201,168,76,0.09);
+    border-color: rgba(201,168,76,0.3);
+  }
+  .program-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .program-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 700;
+    color: rgba(201,168,76,0.07); position: absolute; top: 12px; right: 20px;
+    line-height: 1; pointer-events: none;
+  }
+  .program-icon { font-size: 30px; margin-bottom: 14px; display: block; }
+  .program-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-weight: 700; color: var(--gold-lt); margin-bottom: 6px; line-height: 1.3;
+  }
+  .program-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; letter-spacing: 0.04em; }
+  .program-bullets { list-style: none; }
+  .program-bullets li {
+    font-size: 13px; color: var(--ice-dim); padding-left: 16px;
+    position: relative; line-height: 1.6; margin-bottom: 6px;
+  }
+  .program-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--gold-dim); font-size: 10px; top: 2px; }
+
+  /* ═══ SKILLS ═══ */
+  #skills { background: var(--midnight); }
+  .skills-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; }
+  .skill-card {
+    background: linear-gradient(145deg, var(--card), #0d1f35);
+    border: 1px solid rgba(201,168,76,0.1); border-radius: 4px; padding: 30px;
+    transform-style: preserve-3d;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0; transform: translateY(20px);
+  }
+  .skill-card.visible { opacity: 1; transform: translateY(0); }
+  .skill-card:hover {
+    border-color: rgba(201,168,76,0.28);
+    transform: translateY(-4px) rotateX(3deg);
+    box-shadow: 0 20px 48px rgba(0,0,0,0.35), 0 0 24px rgba(201,168,76,0.07);
+  }
+  .skill-card-icon { font-size: 26px; margin-bottom: 12px; display: block; }
+  .skill-card-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 21px;
+    font-weight: 700; color: var(--gold-lt); margin-bottom: 14px;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .skill-tag {
+    font-size: 11.5px; color: var(--ice-dim);
+    border: 1px solid rgba(214,232,247,0.15); padding: 4px 10px;
+    border-radius: 2px; background: rgba(214,232,247,0.04); transition: all 0.2s;
+  }
+  .skill-tag:hover {
+    background: rgba(201,168,76,0.1); border-color: var(--gold-dim); color: var(--gold-lt);
+  }
+
+  /* ═══ ACHIEVEMENTS ═══ */
+  #achievements { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .ach-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .ach-card {
+    background: linear-gradient(145deg, var(--card2), #0a1825);
+    border: 1px solid rgba(201,168,76,0.1); border-radius: 4px;
+    padding: 30px 26px; position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0; transform: translateY(22px);
+  }
+  .ach-card.visible { opacity: 1; transform: translateY(0); }
+  .ach-card:hover {
+    transform: translateY(-6px) rotateX(5deg);
+    border-color: rgba(201,168,76,0.3);
+    box-shadow: 0 24px 52px rgba(0,0,0,0.4), 0 0 28px rgba(201,168,76,0.09);
+  }
+  .ach-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .ach-val {
+    font-family: 'Cormorant Garamond', serif; font-size: 50px;
+    font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 4px; display: block;
+  }
+  .ach-label { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 8px; display: block; }
+  .ach-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* ═══ DOMAIN ═══ */
+  #domain { background: var(--midnight); }
+  .domain-grid {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 3px; background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.15); border-radius: 4px; overflow: hidden;
+    perspective: 800px;
+  }
+  .domain-cell {
+    background: linear-gradient(145deg, var(--card2), #0a1825);
+    padding: 30px 22px; transition: background 0.3s, transform 0.4s; text-align: center;
+    transform-style: preserve-3d;
+  }
+  .domain-cell:hover {
+    background: linear-gradient(145deg, rgba(25,50,80,0.95), rgba(15,34,56,0.98));
+    transform: translateY(-4px) rotateX(5deg);
+  }
+  .domain-icon { font-size: 30px; margin-bottom: 13px; display: block; }
+  .domain-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 17px;
+    font-weight: 700; color: var(--gold-lt); margin-bottom: 10px;
+  }
+  .domain-items { list-style: none; font-size: 12px; color: var(--ice-dim); line-height: 2; }
+
+  /* ═══ CERTIFICATIONS ═══ */
+  #certifications { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .cert-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+  .cert-card {
+    background: linear-gradient(145deg, var(--card), #0d1f35);
+    border: 1px solid rgba(201,168,76,0.14); border-radius: 4px;
+    padding: 26px 22px; text-align: center;
+    transform-style: preserve-3d;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0; transform: scale(0.94);
+    position: relative; overflow: hidden;
+  }
+  .cert-card.visible { opacity: 1; transform: scale(1); }
+  .cert-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px) rotateX(5deg);
+    box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(201,168,76,0.12);
+  }
+  .cert-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+    transform: scaleX(0); transition: transform 0.3s;
+  }
+  .cert-card:hover::after { transform: scaleX(1); }
+  .cert-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+  .cert-name { font-size: 12.5px; font-weight: 700; color: var(--white); margin-bottom: 5px; line-height: 1.4; }
+  .cert-body { font-size: 11px; color: var(--muted); margin-bottom: 9px; }
+  .cert-year { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 0.1em; }
+
+  /* ═══ TESTIMONIALS ═══ */
+  #testimonials { background: var(--midnight); }
+  .testi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+  .testi-card {
+    background: linear-gradient(145deg, var(--card), #0d1f35);
+    border: 1px solid rgba(201,168,76,0.12); border-radius: 4px;
+    padding: 36px 32px 28px; position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    transition: opacity 0.6s, transform 0.6s;
+    opacity: 0; transform: translateY(22px);
+  }
+  .testi-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+    transition: opacity 0.3s;
+  }
+  .testi-card:hover::before { opacity: 1.5; }
+  .testi-card.visible { opacity: 1; transform: translateY(0); }
+  .testi-card:hover {
+    border-color: rgba(201,168,76,0.35);
+    transform: translateY(-8px) rotateX(5deg) rotateY(-1deg);
+    box-shadow: 0 28px 56px rgba(0,0,0,0.5), 0 0 32px rgba(201,168,76,0.12), inset 0 1px 0 rgba(201,168,76,0.08);
+  }
+  .testi-quote {
+    position: absolute; top: 12px; left: 18px;
+    font-family: 'Cormorant Garamond', serif; font-size: 80px;
+    color: rgba(201,168,76,0.09); line-height: 1; pointer-events: none;
+  }
+  .testi-text {
+    font-family: 'Cormorant Garamond', serif; font-size: 17px;
+    font-style: italic; color: var(--ice); line-height: 1.75;
+    margin-bottom: 20px; position: relative; z-index: 1;
+  }
+  .testi-source {
+    display: flex; align-items: center; gap: 14px; position: relative; z-index: 1;
+  }
+  .testi-dot {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dim), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif; font-size: 16px;
+    font-weight: 700; color: var(--midnight); flex-shrink: 0;
+  }
+  .testi-name { font-size: 12px; font-weight: 700; color: var(--gold-lt); }
+  .testi-org  { font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+  /* ═══ ATS KEYWORDS ═══ */
+  #ats { background: var(--navy); border-top: 1px solid rgba(201,168,76,0.1); border-bottom: 1px solid rgba(201,168,76,0.1); }
+  .ats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .ats-block {
+    background: linear-gradient(145deg, var(--card2), #0a1825);
+    border: 1px solid rgba(201,168,76,0.1); border-radius: 4px; padding: 28px;
+    transition: border-color 0.3s, transform 0.4s;
+    opacity: 0; transform: translateY(18px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .ats-block.visible { opacity: 1; transform: translateY(0); }
+  .ats-block:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-3px); }
+  .ats-block-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 700;
+    color: var(--gold-lt); margin-bottom: 6px;
+  }
+  .ats-block-sub {
+    font-family: 'Space Mono', monospace; font-size: 9px;
+    color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 16px; display: block;
+  }
+  .ats-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .ats-tag {
+    font-size: 11px; color: var(--ice-dim);
+    border: 1px solid rgba(214,232,247,0.15); padding: 3px 9px;
+    border-radius: 2px; background: rgba(214,232,247,0.04);
+    transition: all 0.2s; cursor: default;
+  }
+  .ats-tag:hover {
+    background: rgba(201,168,76,0.12); border-color: var(--gold-dim); color: var(--gold-lt);
+  }
+  .ats-tag.gold {
+    border-color: rgba(201,168,76,0.25); color: var(--gold-lt); background: rgba(201,168,76,0.07);
+  }
+  .ats-tag.gold:hover {
+    background: rgba(201,168,76,0.2); border-color: var(--gold);
+  }
+
+  /* ═══ AWARDS ═══ */
+  #awards { background: var(--midnight); }
+  .awards-list { display: flex; flex-direction: column; gap: 3px; }
+  .award-row {
+    display: flex; align-items: center; gap: 32px;
+    background: linear-gradient(90deg, var(--card2), #0a1825);
+    padding: 22px 32px; border-left: 3px solid transparent;
+    transition: all 0.3s;
+    opacity: 0; transform: translateX(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .award-row.visible { opacity: 1; transform: translateX(0); }
+  .award-row:hover { background: rgba(201,168,76,0.05); border-left-color: var(--gold); }
+  .award-year { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--gold); min-width: 70px; letter-spacing: 0.1em; }
+  .award-icon { font-size: 20px; min-width: 30px; text-align: center; }
+  .award-name { font-size: 15px; font-weight: 500; color: var(--white); }
+
+  /* ═══ CTA ═══ */
+  #cta { background: var(--midnight); text-align: center; padding: 120px 40px; position: relative; overflow: hidden; }
+  #cta::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4.2vw, 52px); font-weight: 300;
+    color: var(--white); margin-bottom: 18px; line-height: 1.15;
+  }
+  .cta-title em { color: var(--gold); font-style: italic; }
+  .cta-sub { font-size: 15px; color: var(--ice-dim); max-width: 560px; margin: 0 auto 44px; line-height: 1.75; }
+  .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: linear-gradient(145deg, #d4a832, #c9a84c, #a8872c);
+    color: var(--midnight);
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 34px;
+    text-decoration: none; transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1); border: none; cursor: pointer;
+    box-shadow: 0 6px 0 #7a5e22, 0 8px 20px rgba(201,168,76,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    border-radius: 3px; position: relative; overflow: hidden;
+  }
+  .btn-primary::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(255,255,255,0.12) 0%,transparent 60%); border-radius:3px; pointer-events:none; }
+  .btn-primary:hover { background: linear-gradient(145deg, #e0b840, #d4a832, #b8922e); transform: translateY(-4px) scale(1.03); box-shadow: 0 10px 0 #7a5e22, 0 14px 32px rgba(201,168,76,0.45), inset 0 1px 0 rgba(255,255,255,0.3); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: linear-gradient(145deg, rgba(20,40,65,0.9), rgba(11,24,41,0.95));
+    color: var(--gold-lt);
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 34px;
+    text-decoration: none; border: 1px solid var(--gold-dim);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.5), 0 8px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(201,168,76,0.15);
+    border-radius: 3px; transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1); position:relative; overflow:hidden;
+  }
+  .btn-secondary::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(255,255,255,0.06) 0%,transparent 60%); border-radius:3px; pointer-events:none; }
+  .btn-secondary:hover { background: linear-gradient(145deg, rgba(30,55,85,0.95), rgba(15,34,56,0.98)); border-color: var(--gold); color: var(--gold); transform: translateY(-4px) scale(1.03); box-shadow: 0 10px 0 rgba(0,0,0,0.5), 0 14px 32px rgba(201,168,76,0.2); }
+
+  /* ═══ FOOTER ═══ */
+  footer {
+    background: var(--midnight); border-top: 1px solid rgba(201,168,76,0.12);
+    text-align: center; padding: 36px; font-size: 11px;
+    color: var(--muted); letter-spacing: 0.07em;
+  }
+
+  /* ═══ SCROLL REVEAL ═══ */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ═══ RESPONSIVE ═══ */
+  @media (max-width: 900px) {
+    .summary-grid, .skills-grid, .testi-grid, .ats-grid { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: repeat(2,1fr); }
+    .domain-grid { grid-template-columns: repeat(2,1fr); }
+    .metrics-band { grid-template-columns: repeat(3,1fr); }
+    nav { padding: 14px 20px; }
+    .nav-links { gap: 14px; }
+    .hero-metrics { grid-template-columns: repeat(3,1fr); }
+    .container { padding: 0 20px; }
+    .ach-grid { grid-template-columns: repeat(2,1fr); }
+    .why-grid, .programs-grid { grid-template-columns: 1fr; }
+  }
+  @media print {
+    nav { display: none; }
+    .grid-lines, body::before { display: none; }
+    section { padding: 56px 0; }
+  }
+
+  /* ── HERO POWER TAGLINE ── */
+  .hero-power-tagline {
+    display: flex; flex-direction: column; align-items: center; gap: 7px;
+    max-width: 860px; margin: 18px auto 24px;
+    padding: 14px 28px;
+    opacity: 0; animation: fadeUp 0.9s 0.55s forwards;
+    position: relative;
+  }
+  .hero-power-tagline::before,
+  .hero-power-tagline::after {
+    content: '';
+    position: absolute; left: 50%; transform: translateX(-50%);
+    width: 80px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  }
+  .hero-power-tagline::before { top: 0; }
+  .hero-power-tagline::after  { bottom: 0; }
+  .tagline-line1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 600; font-style: italic;
+    color: var(--gold-lt); letter-spacing: 0.03em; line-height: 1.4;
+    text-align: center;
+    text-shadow: 0 0 40px rgba(201,168,76,0.2), 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .tagline-line2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(13px, 1.35vw, 16px);
+    font-weight: 400; font-style: italic;
+    color: var(--ice-dim); letter-spacing: 0.02em; line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+  }
+  @media (max-width: 900px) {
+    .tagline-line2 { white-space: normal; }
+  }
+
+  /* ── EXECUTIVE SUMMARY SECTION ── */
+  #exec-summary {
+    background: linear-gradient(180deg, #071120 0%, #0b1829 60%, #071120 100%);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+
+  /* ── EXEC METRICS ROW ── */
+  .exec-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    margin-bottom: 60px;
+    perspective: 1000px;
+  }
+  .exec-metric-tile {
+    background: linear-gradient(145deg, rgba(13,28,50,0.96), rgba(8,18,34,0.99));
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 28px 16px 22px;
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s, box-shadow 0.4s, border-color 0.3s;
+    cursor: default;
+    overflow: hidden;
+  }
+  .exec-metric-tile::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .exec-metric-tile:hover {
+    transform: translateY(-7px) rotateX(6deg);
+    border-color: rgba(201,168,76,0.35);
+    box-shadow: 0 20px 44px rgba(0,0,0,0.5), 0 0 24px rgba(201,168,76,0.12), inset 0 1px 0 rgba(201,168,76,0.08);
+  }
+  .exec-metric-tile:hover::before { opacity: 1; }
+  .exec-metric-top {
+    font-family: 'Space Mono', monospace; font-size: 8px;
+    letter-spacing: 0.14em; color: var(--muted);
+    text-transform: uppercase; display: block; margin-bottom: 8px; line-height: 1.3;
+  }
+  .exec-metric-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px; font-weight: 700; color: var(--gold);
+    line-height: 1; display: block;
+    text-shadow: 0 0 20px rgba(201,168,76,0.4), 0 2px 8px rgba(0,0,0,0.5);
+  }
+  .exec-arrow-up  { color: var(--green); }
+  .exec-arrow-dn  { color: #E88C3A; }
+  .exec-metric-bot {
+    font-family: 'Space Mono', monospace; font-size: 8px;
+    color: var(--green); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-top: 7px; display: block;
+  }
+  .exec-metric-bot.red { color: #E88C3A; }
+
+  /* ── EXEC STACKED CARDS ── */
+  .exec-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+  }
+
+  .exec-card {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    background: linear-gradient(150deg, rgba(13,28,50,0.96), rgba(8,18,34,0.99));
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 4px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.34,1.1,0.64,1), box-shadow 0.4s, border-color 0.3s;
+    box-shadow:
+      0 10px 32px rgba(0,0,0,0.4),
+      0 0 16px rgba(201,168,76,0.05),
+      inset 0 1px 0 rgba(201,168,76,0.07);
+    opacity: 0; transform: translateY(24px);
+  }
+  .exec-card.visible { opacity: 1; transform: translateY(0); }
+  .exec-card:hover {
+    transform: translateY(-5px) rotateX(3deg);
+    border-color: rgba(201,168,76,0.38);
+    box-shadow:
+      0 24px 56px rgba(0,0,0,0.55),
+      0 0 28px rgba(201,168,76,0.12),
+      inset 0 1px 0 rgba(201,168,76,0.12);
+  }
+
+  /* Top accent line */
+  .exec-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.7; transition: opacity 0.3s;
+  }
+  .exec-card:hover::before { opacity: 1; }
+
+  /* Left numbered gutter */
+  .exec-card-step {
+    flex-shrink: 0;
+    width: 64px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 300;
+    color: rgba(201,168,76,0.12);
+    border-right: 1px solid rgba(201,168,76,0.1);
+    background: linear-gradient(180deg, rgba(201,168,76,0.04), transparent);
+    letter-spacing: -0.02em;
+    user-select: none;
+    transition: color 0.3s;
+  }
+  .exec-card:hover .exec-card-step { color: rgba(201,168,76,0.22); }
+
+  /* Card content */
+  .exec-card-inner {
+    flex: 1;
+    padding: 28px 36px;
+  }
+  .exec-card-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 700;
+    display: block; margin-bottom: 14px;
+    text-shadow: 0 0 14px rgba(201,168,76,0.25);
+  }
+  .exec-card-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14.5px, 1.55vw, 17px);
+    font-style: italic; font-weight: 400;
+    color: var(--ice); line-height: 1.72;
+  }
+  .exec-card-body p + p { margin-top: 12px; }
+
+  @media (max-width: 900px) {
+    .exec-metrics-row { grid-template-columns: repeat(3,1fr); }
+    .exec-card-step { display: none; }
+    .exec-card-inner { padding: 22px 24px; }
+  }
+
+
+  /* ── EXEC SUMMARY SUBHEAD ── */
+  .exec-summary-subhead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 600; font-style: italic;
+    color: var(--gold-lt); text-align: center;
+    letter-spacing: 0.03em; line-height: 1.3;
+    margin-top: -32px; margin-bottom: 44px;
+    text-shadow: 0 0 32px rgba(201,168,76,0.18);
+  }
+
+  /* ── IMPACT AT SCALE ── */
+  #impact-scale {
+    background: linear-gradient(180deg, #0b1829 0%, #071120 100%);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    padding: 72px 0 64px;
+  }
+  #impact-scale .section-title { margin-bottom: 16px; }
+  .impact-subhead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 1.8vw, 22px);
+    font-style: italic; font-weight: 400;
+    color: var(--ice-dim); letter-spacing: 0.04em;
+    text-align: center; margin-top: 0; margin-bottom: 44px; display: block;
+    line-height: 1.4;
+  }
+
+  /* 4-column category layout */
+  .impact-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .impact-category {
+    background: linear-gradient(160deg, rgba(13,28,50,0.95), rgba(8,18,34,0.99));
+    border: 1px solid rgba(201,168,76,0.16);
+    border-radius: 4px; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 12px rgba(201,168,76,0.05);
+    transition: box-shadow 0.4s, border-color 0.3s, transform 0.4s;
+    transform-style: preserve-3d;
+  }
+  .impact-category:hover {
+    border-color: rgba(201,168,76,0.3);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(201,168,76,0.1);
+    transform: translateY(-4px) rotateX(3deg);
+  }
+  .impact-cat-header {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 18px 12px;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.06), transparent);
+  }
+  .impact-cat-icon { font-size: 16px; }
+  .impact-cat-name {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    letter-spacing: 0.28em; color: var(--gold); text-transform: uppercase;
+    font-weight: 700;
+  }
+  .impact-tiles {
+    display: flex; flex-direction: column; gap: 2px; padding: 10px 10px 12px;
+  }
+  .impact-tile {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 9px 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(201,168,76,0.07);
+    border-radius: 3px;
+    transition: background 0.25s, border-color 0.25s, transform 0.3s;
+    transform-style: preserve-3d;
+  }
+  .impact-tile:hover {
+    background: rgba(201,168,76,0.06);
+    border-color: rgba(201,168,76,0.18);
+    transform: translateX(3px);
+  }
+  .impact-tile-top {
+    font-family: 'Space Mono', monospace; font-size: 8px;
+    letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;
+    flex: 1;
+  }
+  .impact-tile-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; font-weight: 700; color: var(--gold);
+    line-height: 1; min-width: 62px; text-align: right;
+    text-shadow: 0 0 14px rgba(201,168,76,0.35), 0 1px 4px rgba(0,0,0,0.5);
+  }
+  .impact-tile-val.impv { color: var(--green); text-shadow: 0 0 12px rgba(46,204,138,0.3); }
+  .impact-tile-val.redn { color: #E88C3A;     text-shadow: 0 0 12px rgba(232,140,58,0.3); }
+  .impact-tile-bot {
+    font-family: 'Space Mono', monospace; font-size: 7px;
+    letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;
+    text-align: right; min-width: 62px;
+    display: none; /* hidden — label already in tile-top */
+  }
+  /* Show label below number on hover */
+  .impact-tile:hover .impact-tile-bot {
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .impact-categories { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .impact-categories { grid-template-columns: 1fr; }
+  }
+
+
+  /* ── CERT INTRO LABEL ── */
+  .cert-intro-label {
+    display: block; text-align: center;
+    margin-bottom: 14px;
+    position: relative;
+    opacity: 0; animation: fadeUp 0.8s 0.68s forwards;
+  }
+  .cert-intro-inner {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 7px 22px;
+    background: linear-gradient(145deg, rgba(13,28,50,0.96), rgba(8,18,34,0.99));
+    border: 1px solid rgba(201,168,76,0.22);
+    border-radius: 3px;
+    position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.32s cubic-bezier(0.34,1.2,0.64,1), box-shadow 0.32s, border-color 0.25s;
+    box-shadow:
+      0 4px 14px rgba(0,0,0,0.38),
+      0 0 10px rgba(201,168,76,0.06),
+      inset 0 1px 0 rgba(201,168,76,0.1);
+    cursor: default;
+  }
+  .cert-intro-inner::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent);
+  }
+  .cert-intro-inner:hover {
+    transform: translateY(-3px) rotateX(5deg);
+    border-color: rgba(201,168,76,0.4);
+    box-shadow:
+      0 10px 28px rgba(0,0,0,0.5),
+      0 0 18px rgba(201,168,76,0.1),
+      inset 0 1px 0 rgba(201,168,76,0.15);
+  }
+  .cert-intro-star {
+    color: var(--gold); font-size: 12px; opacity: 0.8;
+    text-shadow: 0 0 8px rgba(201,168,76,0.5);
+  }
+  .cert-intro-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(13px, 1.4vw, 16px);
+    font-style: italic; font-weight: 600;
+    color: var(--ice-dim); letter-spacing: 0.08em;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-brand">SARDAR ALI SHAIK</a>
+  <ul class="nav-links">
+    <li><a href="#impact-scale">Impact</a></li>
+    <li><a href="#exec-summary">Summary</a></li>
+    <li><a href="#why">Why Hire</a></li>
+    <li><a href="#summary">Profile</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#programs">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Results</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#ats">Keywords</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="hero">
+  <div class="grid-lines"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="hero-eyebrow">
+    <div class="hero-eyebrow-pill">
+      <span class="hero-eyebrow-dot"></span>
+      <span class="hero-eyebrow-text">Portfolio</span>
+      <span class="hero-eyebrow-dot"></span>
+    </div>
+  </div>
+
+  <h1 class="hero-name">SARDAR&nbsp;<span class="hero-name-accent">ALI</span>&nbsp;SHAIK</h1>
+
+  <p class="hero-title" style="margin-top:16px;">
+    <span>Program Manager</span> &nbsp;·&nbsp;
+    <span>Senior Scrum Master</span> &nbsp;·&nbsp;
+    <span>Agile Delivery Leader</span> &nbsp;·&nbsp;
+    <span>QA &amp; Test Manager</span>
+    <br><span style="color:var(--muted); font-size:11px; letter-spacing:0.06em;">13+ Years · Banking · Payments · FinTech · APAC (Singapore, Malaysia &amp; India)</span>
+  </p>
+
+  <div class="hero-power-tagline">
+    <span class="tagline-line1">Where Agility Meets Predictability, and Quality Drives Business Outcomes</span>
+    <span class="tagline-line2">Enabling enterprise-scale programs to deliver predictable outcomes, quality excellence, and measurable business value.</span>
+  </div>
+
+  <div class="cert-strip">
+    <span class="cert-intro-label">
+      <span class="cert-intro-inner">
+        <span class="cert-intro-star">✦</span>
+        <span class="cert-intro-text">I&rsquo;m certified in</span>
+        <span class="cert-intro-star">✦</span>
+      </span>
+    </span>
+    <div class="cert-strip-badges">
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🏅</span>
+        <span class="cert-badge-text">CSM®</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">⚡</span>
+        <span class="cert-badge-text">SAFe® 6.0 SSM</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🎯</span>
+        <span class="cert-badge-text">PMP®</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">📦</span>
+        <span class="cert-badge-text">CSPO®</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🔬</span>
+        <span class="cert-badge-text">ISTQB® Advanced</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">📘</span>
+        <span class="cert-badge-text">ISTQB-CTFL</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🤖</span>
+        <span class="cert-badge-text">AI-Empowered SM</span>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🛠️</span>
+        <span class="cert-badge-text">JIRA</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-contact">
+    <div class="hero-contact-line1">
+      <a href="tel:+919000666007" style="color:var(--ice-dim);">📞 (+91) 9000666007</a>
+      <span class="contact-sep">|</span>
+      <a href="tel:+6589002404" style="color:var(--ice-dim);">📞 (+65) 89002404</a>
+      <span class="contact-sep">|</span>
+      <a href="mailto:sardarali.shaik@outlook.in" style="color:var(--ice-dim);"><span style="color:var(--gold);">✉</span> sardarali.shaik@outlook.in</a>
+    </div>
+    <div class="hero-contact-line2">📍 Hyderabad, India &nbsp;·&nbsp; Open to Remote, Hybrid &amp; Global Opportunities (Willing to relocate)</div>
+  </div>
+
+  <div class="hero-btn-row">
+    <a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNiAwIFIgL0Y0IDcgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9BIDw8Ci9TIC9VUkkgL1R5cGUgL0FjdGlvbiAvVVJJIChodHRwczovL3d3dy5saW5rZWRpbi5jb20vaW4vc2FyZGFyYWxpNzg2LykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyA0NTMuNDQ0MSA3OTEuODUxMiA1MTcuMjE2NiA4MDAuODUxMiBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9zYXJkYXJhbGktc2hhaWsuZ2l0aHViLmlvL3BvcnRmb2xpby8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgNTIzLjMzNjYgNzkxLjg1MTIgNTYyLjkyOTEgODAwLjg1MTIgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzIC9OYW1lIC9GNCAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0Fubm90cyBbIDQgMCBSIDUgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDExIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTEgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iagoxMCAwIG9iago8PAovQXV0aG9yIChcKGFub255bW91c1wpKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYwNDIwMDYwMzM2KzAwJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYwNDIwMDYwMzM2KzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChcKGFub255bW91c1wpKSAvVHJhcHBlZCAvRmFsc2UKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9Db3VudCAxIC9LaWRzIFsgOCAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjEyIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDkwNTYKPj4Kc3RyZWFtCkdiIi8sPkJlZkJaQDotJ2thMWZgQjxcLS0tMEppTE4iXWdpUWlOUHU1MEdUN1snQFY7QE8sQiNjXkdyKldrKUU6KCdrPTQyVF9KU2FrR0stQy5aclVlUSNzXlxoVCFOcnNcVyRQO3NkNkErSyczK0dOSi0yb01wWFJ1R1piRHVBYkQyaGkvYHFPMiEtW1MmX0Fjcy1mRjo/SEx1ZGlDVUBNLlctKyVBLkAzaU9IVHBaSXRdTURLQlZHK0hHUSFOYzA3KVIvTkZNRXE8WFZGUzhmUjxrX15MRGA2NShsT2NkciUrRV1IcmtiNEVlOzdtVFQnJic2XkNjNDs1Q1IqImBaakcnNE5BXW9IXURoIUYnPj9hbj9hdHNTYiMjX0lJLVRVSTdxUzBPUltoWiRVMkhtb2QsP2heODFJPSdBNT9YJ1Y3KmE0akNzNEJPOVdeKlxiakoqKzBgYG9NKk42SjJZZ29BRWJXUWtOIWdcX0FVVj5oZGYtPS4qXWhIT3RINGFdTzdAVEFsMjdELj8xKkxSUVpnVClHXTg/Y1EuJG9gXF0/a3FtUi9UQlQvZVw6R291TmJxcT8oOzQvR3NEUT5rMVwyIydALWRYbEttKzlZSyFyYTBFJSlka2ZCUSxETG0+bzhaOlk+LSxsJFxwbS4qZ3RBcmlpXmVKXjVoW1ojajlYNGp0YTRCJ3VXQWEjO0VHcktQR18yNjA9IjlbXCpXKTdvIklocj8tbEo8cnQhLUV0S3VKbkkxTEIiQTNFIzBiVjdiSE8pXXB0SVghbihEZUMxWUVlRmRaUEJWQ0FmK2g9KVVbJ2xhbERuXSdiaXIzTmctKzYuVj4mQGJPNVdsIklOK1MnTjdoMlwyWy4pcHJxdTl1QU5ALDskWT5VVXUjUGI5Ql4xNCJYJlNpYlMiJCtQdFVAVi8uQDRmM0hkLS0hbGIvPWU5RFUicVleIjNcNC9cbjkkNjgpMCRJc0NuZyFOOkFZP0tBVG40YU1AbFxIcyM0QVk0Um5ZJVJNQGJxKjJVZko8M2hyLlQrNmRVYV5SNUc8XD40KGB0WiNbUHQ5XS4iRUwpL19CTVU5OGdbPjsqOmlXPjkhZSJKU0AyIVJSNzpVQk1dKkhCWmQ/QTBGNzskQjEvNXNKSWgjaTdsamEuYkRlTVZWJydxRT5iNjpVMk9jZ2xZVlpncVRlPzYsayQ5JUVBUzZndCo+W04jX1E6WSVEMWt1aD0yMl5FQlJHZl84TktKR1dsRS1TK0kwc2EqQl9DUSJWbVBAZ01Qb05nQzZrNjtMXClPXlgwYlJJI1sjJDZCPUpGM3AsLTMlOSRRO1NAJC82UypfYjUpUkAhWjkoNiM/X0B0MEBUXCVQVnBfO0ZSMTFbbzQxa1AqLVJxPFIvMF0+ISwpJjdHY3RvdXUlMmdSbjpmZ1g3dDpGY0MkUz8vRTtgcT43dUJDRSNZcnBqdXNqIz1jUj80RXE7dCNCNXNFb1Nfc0hsYTFsbXMvZTZYXCgnPTNvc09Ic2FtY2hER106WCtJLkAzQm8/ND5mZy8wTipddDBCYUYnbj1HP3BZRD1ub29UXyFhJztFOXRjIiRtSlc6TVQ/Vl8lPi8iRE5RZVVnKGhXb1YucEZlYTJiY19JaDE3bkBFPjU3OHVWcSE4alIpP1YwYkByaC1jMSE6OS5WXGstSm4+VWA8bEpGRixNImArTF9qdGZnRGVpLiRWXD80K2hCaG9RXXI/PGNmRXRkP0JKKnNnZCRWLisjcTcoLDhDdEpLTElkTyxKalo+VEVjYlQ7KnEhZl0kLSohOyNzWV1PSCVvQUpiQDs0UyY8P0dLNHJJIUQqZSUmQCRcRyppIT9SX1FGZmRNI0pFJWYna1FaRFxuaCk7J2VqYi5WaSRQQ0NUZiddQCQsLnBKVktCQ0x1LVVbOHFoOzZVR1NmMTRJZTVPUTNfPFkuYEZET0E1UTVJcDZlQzYsLnJycVcyUHJkNTU1aXJsPW1cQDk3YFBHLDEidT49LUtQYiJoTmc7IlpnIiRrcmtUZFVlaVhzMTFbXl45NFchJE9USSVBayZRMDkuMFQ3VytndD89PVdfYEY7NDdfK1YkZGkmJlMzYD5CVUM8MVZmbUtgKikwUFBbVWc8XVBiU1ZQJFtCQGoxZS5xMChkSnJSVmM9Z2AwTmhUKV8uPHEmXyEiW15AJjApJU4mPVRzV3NtVzNiUydnbztPRldRPTJJKFJmUSdrdGRkL1RWOys2WjVXNUQzdG4+bCw2LFxdUVtBKFo/WjVZOVtbJj1qLi4lSSNGPUduLjNGaFRaTUpwMlVONUpIbGpjWG9EbWJsJDhgI0hiazlsTyY+X3FQQWtPWVZfXiooaUE9LmxYPlQzTyo4WSQsaG5tQ0kiSSwyQW02UUJLXl1OZ04tdGBeP0VBWGw8UioncnM9a0EvaUshXXIxbzFbbiZGSl4xQjZMNm0yQF8qbVRBXTNQaFg4QzUsaVwwZjk1TWcoPmxhbl06K0RNMEdZRTA1WV1SZmxCPCZyYFo8QERGLmEoMXRtPicyVC04X1dfOSZsJT44SDxRUkVPTD4sb2UuXEg2QCpLLzUxNCdJVGFFMUtWS04zM00iUkwjbGluZGlDMlIlZDNRJUBWXEhfc0I4VztPYipTV0FnQ1Y0Y0NJR143alpOVl0hNjNwMSZHamwzIjUsdEt1LDZISz5ZZC9tMiNEJyNAZkRiXGQ+Sj0xRidrdWFfXStqX3FHOnJpKS5uTUYwRjZTc0VxMiRDZlJlJC91cShoYWVjMCEpJ21BVSVOXSI2JjlFVWVBJDxcciNYWFdCZjdBTVFWUl8iTUk3S2BLLm9JZy9MLDEpMHEkcT5DbTBsN2lHdSI4VCttIkdzWDoyVTNpdSo1UjorQExrS2VwUzUySXIkQGMqPUtoMmQ8Q1gtWmosYi9DWlNzL0lvXFYkQypBLl8iN249SSwyJUUpKGJFbSpZcFY0XVcpI1RpNF9FJkdGLD40QmxmXjJqbUEiWzUhcTsqbTxyOjcjNG43VzlNVVVgIiRlS11EUFZPJFpeVlxwQ0NoUUphPEU4QSQxRXIlW29rS1RVRClaVjkiPCVWKj5cIV5edVsjJExmS0E1Oz0+JkRVUilBYy4pNSxwLzdqSS9IXFNjS1JdYmg4K2NBUztbLkQ5Uk10SlI/NEpvWHFkOFVcTWdPXVQ4OFpYNVNBLFo+OnNaKSsiZigiZkxacjtqJXVQOmdsJDdVLjtsSjYzUC1TS2UlYzNJOVR0Uk9CQCYjWTMoc3IzIUlXQk5iNCFDYGwpKyZAKjhxX2lCMD87ZUtzbjZeVFZndC5uK1tpZ0snTloxLU8tWSciZVlaMlxJcWBoRD1iX0k2OTtrTlwxIVJyQik4JVQ3TFFCSkgnK3BHU3VPWVciSWA/O2Zjc1I7ZTw7ZSFqckw5WGplNiwsNlVQbm0jYVklWjJPUStTIVxcMWRdS29dNUpLazBkRXUmaS1pamBiKUFbPCNsSyU/YD1pZSElJS44YiZcV3I5JXRTajUlalJqQVVMIVhGVHE7UWEzNkRXLWBacUg+SUEvNz4zPGpGI08uZDQ+SFRMUDY5KTw2UWgpNyxCSilkLztBYW1ecG1BXU0kLScxYi1SN0M7Z1tfSjxHKVxqXk9FaEU0bDZKSm5iN0tIcGRBczYjWUVFSUhwTkxHN1FaL2gkSyViTixVcD9AJzswcnJDSV5CR1w5PypDY1pNZTVcLjtCaHEiOEZgKzBldUJfY1U3bz8rZT9eciQqV1w0JTJhMjZxXHUxR0pyRC9EWGVCY0ApTyZPbzpiaG9TMz5JSzZKU2Q5I2xMZS87PVh1MHBKOzEoSXFEZmVJZ01vWjRIODlbNTRsSyczTUdVIytqc1xTaEhxTWRBL1d0WSlrMV1AMERtLmtzOSMxQTxZJkteSUUobXJyITIsajhAOVRTW0ouREN0X2BqMnRlbmRmIW9jbTo4OnJrK0dOSkoscTs4V3JbKTd0P0BoNUsiUVZsWF5zTE8yUS46Rk5obUxZQ2wjYD0iQWFNJChAZDlnWFkiVExLLkV1V0NTX0BwQi5yVCFXRC1fNFpuZ15HXSZxNVhTITYubiVgU2Vjc1w3MW4jTyxOV0lJTlwmPiwlVm9uISYrUj0hajYuTWo8W0VZX2VgQERkbU5RRWFaJ1snIj5EMDEkQUBvIXFBb1pFKD09W0Q6a1lUSCJwaCxLIU51XVRNLVdqTlhwTztaIkBhcGtpI1xJWE9xOUtGTlhJLy1CKW5gRFVSNz81SktXNWU7JEVAcS5ObVVQKidkVj5tTmAkKVpWOTBVUSR0R1IhOW1tWzkzMWZMTV5YSzE7Kkc2TjRpUyVFJkwlTDFgKSVVYTpfajVBOFM4cW8kRHNQSnE+bSw2akhjTSIlQig4TiksNF9eL0pWWkBQL19LZFNUNiU+MEcoISpNRD4vbC9ebjo2aWRIJ2UxK3Rucy1rRS9dPXFlZStuTmVUSlJnR1BjNWZLKWhcSTo6YD5yckE4MEpuOWcibGdKdCNxIz4hakUoRk84ZUpqWjlhMTNDaF9GbjhyIktfW1clInIzYm9WcGUhMl5gYGoqOF8jYXRUc0U8QVx0bW9dTUQiTHVcKTxiUVwxLDBSL2JjO0FocDJNPDRZJ0EzKjY+RF8+Z1A+YEBXUCFtNlMvSnIjZzZBSGFnVzE7YW5eSjwpYC5LOmAzLmlrTzIvOEFZQkBEIXJiWWhaVj0lO05nNUdrXCInJzFbSmtDPiJAbW4rMDUvUFE7JjE+O2ZxVTomUCpgQD47ISsjUlhwbm5nci4nWCgyN3JocERBQ2EwWS5fQD1MZkokTC5HOUdYdT8pSGlzInEjJU5OSWwhUDZLOydKLWdOXTNzbD1UZVRJUG9rZltEaShLQWtEYUdtUihDUzp0UUpFUnA5azJDampLTW5cUnJHK2EubWYmTSgnPFBPRC4zKSgsIVhzX0U3N2tgKTVbU1duWVA7KmE4aVQhOCwqSlEjRih1VWJLK2FtLDxtZy87KWVIcjZjK0JrRVZZXlMhYjNeb0pBaFtOcEhTVy0paVkwLEsxUTIsT2BObVc2TzY6KkJILypdISIhKiNabjlrTzB1Z1Zebi4mdFRYTzdDK2hLLElMO01uIyxONU84dSxSX1NeVDY6ZyVsZ0tjOD5ZZDpiYmNwYipfbGkjSjdzZkU6JHRGITFGU1M7RFksZyxmM1dzbE9NOlNsJkBMRXVZNSklMkxQW2tcRTtkYT0lIUBRaT87UVhrTyhrWDcqVVFDdXNaWGZMZyxrKDVoamFxU21fPVZmUkcqaGVIaScpNWdCNiFiSj0+PDRHY0JVTF41IlFSS1VNZiRzaSwjL05FJms1KiMuTCxGbmNGXU87ODVyNXBMMV5GR25MZHMrPmNAb0ArTUlgL05pS0QrXUQqUDo9QTUqNVkxTzZpXGQhc0xXaUpRRVc1STs/KTJAYlJoaF5BYDBPakNIb0ViN2Y8Q3RWJjs4dUhiMWkuOmpHQmUlLDhLOmdSRS5rNylDQWtRZS0mXlsvQ0g7SyQ/dE5KKSJLbjVFVmtRMy5gK1VvMENpLEEtcmFYaS5IUVFSV1s8O1diV1hHOiQtVWNrLjYwLC1QKSkhNj10Sks/I3FscjFCI2pTX2RqISZhPUUiWnRaVl1INlxtdWxdXzU+RWk9KUZKU1Mya25HIl5sVXBtPXVSXiV0SW0qY1NCUEg1LFtDN29jWzYpR288VlZGJDBFVDk3WVdZVmVQSi1sPFArSSQ2WF5JJ2wua0dXdWA6YGBDOiYpM1cyUGxhaUEoPClvTV01cjtBNmQyXi5hbWhOInVoVls8YypiWz9lZ1k2VSc9ZWQ1YEE/N3BlUUJEMEs1ZWpsRmVYMSxIOjE+PjJEWmA+Sz9qUmo2YkBbYW5IXCc+IU9bW1hPKWFjOSk0Z0QqZGA9T1Epby8kT3Veb2QoMXIjRklHNExVPUwzZyd1PT5SIS1lUGpwIUtMKWEhW0QkIUc8UWpGQT4/U2FTTktNPlBaMDZAblloYDxbWW4wSiVUTihBckZCTnNyZ21WOjNbbCpSRTNJXnAxPUZBcERzJWllYVAkIyEwNTxfTmJmXFZFRSJhUzVRN2RUPixrOmRhPSRyOHBnJkxVcmVuMUpqaUhdLElhVlFFNlpkYEhzLE5TQF1zKEpHUFNuT2RpRGs1bmNwI1NHUCo0Q0hWQDAmbz9BPl9DZ1ZPZzQ9OUsoRWNjNF9PODZzU2BdVS1DbzlePTtjWUQkUzUjcUBFVD8rQUFwZUBjOlA2Mz5rZUkqKmYhUFA2IV8rSFkoZDtJdFNtNUVeaCU+Kmo6TypnSWVxUzVBcmtebEtDZGVJX1wiKEpsIzxLJDhSVDhLXkE+NmBXISxtW248I2xTOCEuU0dGYS4pQSFiJU1ML0dwblM5Y1kqbGBZRDAxPztEb3IpRlhOPlxRIV1TXWclVHBTNW1xTVAkPWZvLmozQjs2R3JfQ2M0b0guaURxRyhxT0RXJz5NVT1HNnUzVGAuQWcnP1krSUtyKGEyTy9MKGxsJEY8KFcuNFRHVSdocWA/TCVdcionbG1DZXNYY11rajE+U0NVLGIpJmBkPFIrKG5DUjRvR1NDajhxSkhcVSFpKjZqZ2JdSlxtN15mJmRkUVYrdV5LYkZrRj1ub29lI0MlWFg6UXIndSJxYDksSGMjR19fck5qUGFPZ0VBSjIhYU1CMCNNNiI9OERjKC5DbjEzYW4iUit0JTZtMTYvMWlpOmpHdG1daShTQWxYW0NtMC0/azRbaU9ESFYwPGRBTl5xZkRZN0hYRypnJDU9T21iTT8uSy9vQ2lrWm02Li90cGAxaDRGXiZMYz4qN05fSUg+Rk8iQyxidFE2L1ZnQ0l0Y3Q6QnMwSVckcl8ybz0wNUQpS1JhVzJEOjRwJkNyUiNTMC8odDhLRmE+MVw0RWVVX1E2OUZBZUAxNjFBL3RIKmxjU1k7PU9rKl5NS0wpYVw+WStmVDdzOjhvT04vLTxuVFxZMmk0OkNXaU0mVVNdNkNgNj1SXyVfNS1scScpKUNlKkI1Q0FTJTUpS1BeY0loSm1OPl0nSSs9QjNwMF0mWF85akN1dTk+Ol42PigkWllIJFtKRC5NKm1qTWZhV3NUZS46MCNoaCtIaVduKEFENWxARTlOOFM/RTVXLGVKOSxGSF4uXTxJTnRWRD5GSU49IjwhWmRRS2k+SUFGXT5MbUU+TDpZZkdMSXElVSRMa1BbZVteVFckcl80ayc5N1ZsYWE1SnFMXl5xIj8sMzJsOXE0RE9AUzdrYm1tTSdUaTNgYSEtXDBFVE9bWUooPD9oV3UmK2VRQVBoLlBLVTs7UlhgZCJiIUdobl1MVllucWNAMlZiNiUhV09QLllULnEmQGtuYDskbFlLYkBkWUglb0xEV1JINyhcYW0lJnJjL0hkLUs1LllbLTAmLkk2IUpPaTgnOlNRbCFsNS9UTlN1LD45bGcwMElYU0lRMWo5MTo4TXM9KVBqbEhEQnFlQENGaVB0YjIpTSsucDtzSW4vRjEmRWZPMzZhTkJDPVxlQy9jZ0oqWGYkajkwcGBNZmpxbURUZHE/ZWFmZiF1MjJqPzJgXE9TRlddPW9CKmk1Zi9RM0BaRWQ3IiVfMFlPcSJabEs7XUhHJmFuJ1RlVSFIXyttRU4nQj1DTSpAcTE6PS5tUXBFcF0zLSlJbGU5X2FVTUM4N1lDQHRmR01nZERHbVFyWlAlS1ZFI0tSTUFUM05kb0BsImItS101LVQ0VzBCRzBZJTplcyM5MjdwLF9CVGRXQGFEZm4vcj1RK2FGTUhqQSljUz9cKDoqa2UoWUheODlTWS5HYShvOjMpRVE4ckZyTilyJSJnM3JqUmhqKz9lZFUxbWNbWjJNSiNSNmU4X2lXT0okQFlLJzJJSyRBLSczcnRMdEUlXXBOIVoxMCJCSWQxJFhoU2pAYS5APGtLVzNvVjhWZ1paM084JSY5YjcuTjFmLFcqJFhNNUMhPjJfW1FaUVlYWUxxcylnXWU0aTwjQidLXVoncDs5a2MkPmEzV1MnXElhI0c5KihDOjNHJGZjLWYzLDdxNmA2KzZPUyEkM2A4Zj9AT15xSm1ULkMvU1VYQVJVVzFMXzAvLC0qKFo0Ol4xRDJfMjROXDMoNjd0al9QZi87O2FRUTd1WTtoZTc9ZDgrTUQ4aCdQMEwjaTYtJCIuUnE2RVolYEJNQXNLYGxfZjhIKSonNk0oWi5wZTlIVlpHaEY1Y1IzIy9IJUcnPi5TL0ciUWhJKUU4VitpXEZyU186MmQ1PUBYM1xNOzQubyk3M1gnKExyOUtuZjBUb25aV01Ua1BEMmgvTVhtU1ApMzdDL1VbVE8saXRUSS8iPjxMcVdCV25PXGVWUzFdSzJFXzk1InQuKV5rJik3UFY9YWhqMnVHM1xTJyUhUj83SFxEZnBCSmxNXydzLUcjRT5rUnAxJy5uMEJCYHJwUDpzXnFBLnNcW0NNPTBVR3F1cUg5VXFRRlclNyQ8YSRsMT4jUF1nL2kpNzdkRjprRjNwJVwvbnBvYXBrO21RJlI7NiJNSzxxWiQlJldgcCJWSmE2bGdNP007W0NwR0gnKnE+XyhGVTpHOkVBZENVUkhgOWZgLkdIYCl1RGpEZCdKYFA7NChaR0pAbUkqM0JIY08zckgvRmRcKklvbVd0Qic+LSVWMjE4Ky1wXTohJGtMX1cpLjM6Z0tSKSxYNCdIT0Q9aypxZkpcRS86UDxUSTooLCNBSDdbPzo9a1N1LS91OnMiMlI9YSotOzRIOGZDKiddVjZrcExOQm5Qaz8lOlotO00tOEAwdUskRElhIypnTDA+R2Y/dUo7V2Z1YiVvWEVRLkt0XlhORz1pKDh1ZXByciEpKiFrYGpaXy1Mbjhnc21fZFIsVXVeTEcrKDk7KS1OMUdfbE8uMSNmMXJYdXUuUj5dbmNVJ3UqcTxXMV1JP2dtdWxGRFxPYCliJWw8VWZhKkM0RzZfM0hqKGM8aGdTKiNbQmE6O1tlX0BpMV0iPVIiP0hJNHQhTkFAcThqOWwzR1ZANUNsYlxjXmZqLSNBKDw6SlMrKWthb1NmSTc7TDRAN0ppYz4+VGMrKjoiWEMxL2kubDtoVXJCRS4vcWFWPCM3L0cjImI0YF1SVVBXbWdpaFQxT0dMOWZUJG9KcFM6WEhbZk5WWSN0Syx1YVYiMFdfajVkIUtoVEAvKSkmLWJXPXIhM05wbTJKdUFITnAsczVmS1IvKnQxdSE6VCY6dSVgbWknSjBpRixmTUVWPkhjT2pALVMkVGxuWCovKVA2M2AtTi1fJGpFK1BGT1w4LTZ1JHQxIUEuOVVlNCUmKUZFWS5YXyZEKyEndEBuXT5ARUpEbjNKRDhALU1JQ11YKzxRT29BVEJuY2EiYS9cVWpfOXVZPCg9Kkw1ZHFZWE0iO18rUTdiTDVaUT8zLCVHZi0hcSwuaWk9Om5AJTJeJCMybVU8T1NbQyw9WCpBMlhSUCtsPDkrXiFqLD90O0EjMzRzMj1XVylxS2l0OFJJcl0vQ1JCcGZPb01wcSpQK3RmOGg2dVVDVyxBXCJoJGZuSkY+Z0dwYF1gK0dsW1lnSS4oSywkT2Jvbz8vJUJJbjRxUmJKJVwtRnUvX2dROWQybWZMKjZZVD1AJ2FIJSZTIWVKIi1NYTFdISUlMC9kNVwnL3NfdSpHI2ptVU5sVkFVRFVXOzxWX2U9Sz8qJWdtVDVgSSE0aFhwOGdTMSswPkJUc1BbOHI9SEJwNyIiX0RrbWJKNnM9SyJmRGxKcGZXLGU9UmBha0hza0RwNTRzb2FMaGc3TlNLSDNeM1NtOHQwblhnZG46VlxTVFYqS1M9cU9eU0gmXnU7TGkkJzRaOEEsWWI5USxpTU9yJV5fV05iZiNIWHNzWVVwMyk+cyhvOmg5NWk0JkJDIWEkKlMzT0dcZSZlL0pZU1ZhKl8rYzJHQF9pW1cucChFUDE5Nl1AQW8jSUonKkxxInVKIS1IUCtjb0JVIVFLKyQlS3BAPCdMSzYtIy5Ya1o+PDozUTslbUIzPlhbI1FYXjI4J2g7TyJkXERJaGNsYVhgTFZgW2s8Ji4lK2xAKVdhKS5rb044YFglMlUyQjtkSlk/SEpgcmRQX2tbXUhWMjNOTU08c1hkYTY/RWhZZCNSVUlOdT5IYTMvYi4iMkNDVVB1Mi5hWUpgVipwbExnJG1eWHBlWCNXLEZnallkLzY/I3FzISdFXyJfXDA8NXMhI2AndV5UTU5GQVkzVkpTSDUoN21zbio+LGtoPVJUQVJELSR0UypRY3E3bGw5JlFAPTw7YCFvcTlCN1chMXMpOFFQYDxlITUnMUs6KD06MWkzSi8mZGxjaEFYIkE4JldPTi1ZM2hjJlguKjw9JmRpYFdZNEUsYWhEWXRIM2MkdFZZalxeLWxLPz5XQkBuNE1lcFdmREhyT2Q/QEhoayZEM25XJGY2MyEpJCM+JEgwI28hcWFlMj5TamlUY2cqOjIlWSZwJjxSc0ldRlchaCI2SUFGJE5vIi5YQHBxXSFiQ0M8IW8kU1dHaz1NTUxNMFptSkFKPEZnay5YQltIPW0pVVAiZFpYTmozLkdzIkg6MSgmaW1UNmtYP2pJQSQvRUVecitgR0ErYDUjNEppbWJuRydaLjc2ZUZzQCdtW3BONzBXLy5wQkUtLz8nXUZRYk1vU1VoJnF0KjZOSWJjV1RaOWltSCdJNzQlbWI0OEczTklMKWxBVnVYIyRVajFpLGJRLUc7IT1dIlJCSzwzaEFVT0FtWzxKPUhTay49SjlWZzhUQTw+cm00QT43JlNiWD1FQWpEUzpuX1VVOUNZSWUzKU0mOV5naitpN24wOUFxOFVsITwtR0wnUXMkZlg7cVszcGAhUGdPZ2k8ZXAhcGUuODlQUmtGalBob2IibyhTc08oUzRGQXMrOUctaGZWYGhMZV0pZkUhKDFRZnRFLFhCbmRKbypDay8raEpoNzdsWllHY20/PTsuanEjcG5mUjdWU1stX1AqZiwiJzhpcTdfXD9TST1OMkxbPUtWV0c9MylNYDYxPSpGdCcjOTcjU14jXzcoRm1oPXFfN2ZbISZvI3UiQzpeVERGRj42Wk5IZTJUSWFYKCxnSEZQW0klI0AmRTRtVVM3MyRwJExCW1pNUF9DV0NPUjEzSWY7PmkxNGopP3NnOUQ+bi9jPTFGVGNldUc1LFsybWIkIjFVJ2doYHEidCc2JGwkU2pUKlhzX1BRKitpQWUmMlgmKypcLTUyMFJPI1w1J1dHUTEob1cuSy5aaG8qSElAYVxUJXNMTkc6RCdwa0QwM2ZQLl5IakZJOzRzUSVQaC0lPF9HUiY9TkpRP3VCRyllXCdAPSNZPW1ZdVwyX2RmIzZiJiReJlksVSs5SjptXjctTUo8VWdCczthLzpBZ1lJRCNLIjM/MDJlcXE7cFptYm5GW0lbNElIPj4+W3Uxb0Q9dFFRc0hHP0lecztCKDtuMlM5LGVQMmZaZjsydTlgQjBnIS5lcDBYQkFFT3IpUU0nOEZjMU48Si44WickOWo/InRJJCwvPGddUShOOGtGcjsyW3UlKFJZZyV0XUIxSD1Rbm9mYyRKK1pUJD5RVlFuI1lxKVpVP2hxblFHQ1BlVCEyYiUjLnVfNS1ZUWZrciQ1V3VZZmVlamduRkZSa2pbbD1GZTJXZT0hajomVDt1R0xORVdSI1pvMikrMEk0KlduLmUiLEZ1QjJUXV5kUnBePiJhRUdQWyNLKW5TbGRCJyxTQ1xONGQ+WChkVVdKMzAlSnBHMCJ1T2hdIz1oIzpYQyVcWHIqTWYsSEpVO2EzNUhHZCRzOURpJ00kQ2VBJUVdKHNUakdvTE5aYE1BRCxvI0ZMSUwuKzVnRyJOZGEqc2JsZm9oXV89P1FmMUVhS0dRYjMkaj9WZVxdUkw2JlRXcCFvWUdbZ04/I0dONHJWK1w9UjVFVFk+WkRCQnN1XEMyZ3FNWFRKVCZEYmlZQmNgPyRfY04oVl1fUG5MKlBFMH4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMTMKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMjIgMDAwMDAgbiAKMDAwMDAwMDIyOSAwMDAwMCBuIAowMDAwMDAwMzQxIDAwMDAwIG4gCjAwMDAwMDA1MzQgMDAwMDAgbiAKMDAwMDAwMDczMCAwMDAwMCBuIAowMDAwMDAwODQ1IDAwMDAwIG4gCjAwMDAwMDA5MjggMDAwMDAgbiAKMDAwMDAwMTE1NyAwMDAwMCBuIAowMDAwMDAxMjI2IDAwMDAwIG4gCjAwMDAwMDE1MDcgMDAwMDAgbiAKMDAwMDAwMTU2NyAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzwwOTQ1NGUxYzVlOWEwMGNhMjA0YzZhODA4NjQxNjY2ND48MDk0NTRlMWM1ZTlhMDBjYTIwNGM2YTgwODY0MTY2NjQ+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAob3BlbnNvdXJjZSkKCi9JbmZvIDEwIDAgUgovUm9vdCA5IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKMTA3MTUKJSVFT0YK" download="SardarAliShaik_Resume.pdf" class="btn-3d btn-3d-gold">⬇ Download Resume</a>
+    <a href="https://linkedin.com/in/sardarali786" target="_blank" class="btn-3d btn-3d-gold">🔗 View LinkedIn Profile</a>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════
+     IMPACT AT SCALE
+══════════════════════════════════════ -->
+<section id="impact-scale">
+  <div class="container">
+    <span class="section-label reveal">Performance Data</span>
+    <h2 class="section-title reveal">Impact <em>at Scale</em></h2>
+    <p class="impact-subhead reveal">Proven Delivery Excellence &amp; Measurable Results</p>
+
+    <div class="impact-categories reveal">
+
+      <!-- DELIVERY -->
+      <div class="impact-category">
+        <div class="impact-cat-header">
+          <span class="impact-cat-icon">🎯</span>
+          <span class="impact-cat-name">Delivery</span>
+        </div>
+        <div class="impact-tiles">
+          <div class="impact-tile">
+            <span class="impact-tile-top">Experience</span>
+            <span class="impact-tile-val" data-target="13" data-suffix="+">0</span>
+            <span class="impact-tile-bot">Industry Years</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Milestone</span>
+            <span class="impact-tile-val" data-target="100" data-suffix="%">0</span>
+            <span class="impact-tile-bot">Adherence</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Programs Delivered</span>
+            <span class="impact-tile-val impv" data-target="30" data-suffix="+">0</span>
+            <span class="impact-tile-bot green">Achieved</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLOW -->
+      <div class="impact-category">
+        <div class="impact-cat-header">
+          <span class="impact-cat-icon">⚡</span>
+          <span class="impact-cat-name">Flow</span>
+        </div>
+        <div class="impact-tiles">
+          <div class="impact-tile">
+            <span class="impact-tile-top">Sprint Predictability</span>
+            <span class="impact-tile-val impv" data-target="28" data-prefix="+" data-suffix="%">0</span>
+            <span class="impact-tile-bot green">Improvement</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Team Velocity</span>
+            <span class="impact-tile-val impv" data-target="22" data-prefix="+" data-suffix="%">0</span>
+            <span class="impact-tile-bot green">Improvement</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Sprint Spillovers</span>
+            <span class="impact-tile-val redn" data-target="35" data-prefix="-" data-suffix="%">0</span>
+            <span class="impact-tile-bot orange">Reduction</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUALITY -->
+      <div class="impact-category">
+        <div class="impact-cat-header">
+          <span class="impact-cat-icon">🔬</span>
+          <span class="impact-cat-name">Quality</span>
+        </div>
+        <div class="impact-tiles">
+          <div class="impact-tile">
+            <span class="impact-tile-top">Defect Leakage</span>
+            <span class="impact-tile-val redn" data-target="32" data-prefix="-" data-suffix="%">0</span>
+            <span class="impact-tile-bot orange">Reduction</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Regression Effort</span>
+            <span class="impact-tile-val redn" data-target="40" data-prefix="-" data-suffix="%">0</span>
+            <span class="impact-tile-bot orange">Reduction</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Backlog</span>
+            <span class="impact-tile-val" data-target="95" data-suffix="%">0</span>
+            <span class="impact-tile-bot">Readiness</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXECUTION -->
+      <div class="impact-category">
+        <div class="impact-cat-header">
+          <span class="impact-cat-icon">📈</span>
+          <span class="impact-cat-name">Execution</span>
+        </div>
+        <div class="impact-tiles">
+          <div class="impact-tile">
+            <span class="impact-tile-top">Lead Time</span>
+            <span class="impact-tile-val redn" data-target="30" data-prefix="-" data-suffix="%">0</span>
+            <span class="impact-tile-bot orange">Reduction</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">Cycle Time</span>
+            <span class="impact-tile-val redn" data-target="26" data-prefix="-" data-suffix="%">0</span>
+            <span class="impact-tile-bot orange">Reduction</span>
+          </div>
+          <div class="impact-tile">
+            <span class="impact-tile-top">On-Time Delivery</span>
+            <span class="impact-tile-val impv" data-target="100" data-suffix="%">0</span>
+            <span class="impact-tile-bot green">Achieved</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     EXECUTIVE SUMMARY
+══════════════════════════════════════ -->
+<section id="exec-summary">
+  <div class="container">
+    <span class="section-label reveal">Leadership Profile</span>
+    <h2 class="section-title reveal">Executive <em>Summary</em></h2>
+    <p class="exec-summary-subhead reveal">Transformative Leadership in Agility &amp; Quality</p>
+
+    <!-- 3 stacked vertical cards -->
+    <div class="exec-stack">
+
+      <!-- Card 1: About Me -->
+      <div class="exec-card reveal" data-step="01">
+        <div class="exec-card-step">01</div>
+        <div class="exec-card-inner">
+          <span class="exec-card-label">About Me</span>
+          <div class="exec-card-body">
+            <p>As a seasoned Agile leader and QA expert, I drive high-performing teams by integrating Agile practices with quality engineering to deliver predictable outcomes, measurable value, and continuous improvement across complex, high-impact programs.</p>
+            <p>I specialize in leading cross-functional teams across global initiatives, cultivating a culture of accountability, transparency, and ownership—aligning business, technology, and quality to accelerate delivery and ensure release predictability. I consistently enable resilient, high-performing teams that deliver predictable releases and optimized quality outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: My Philosophy -->
+      <div class="exec-card reveal" data-step="02">
+        <div class="exec-card-step">02</div>
+        <div class="exec-card-inner">
+          <span class="exec-card-label">My Philosophy</span>
+          <div class="exec-card-body">
+            <p>Where Agile leadership meets QA excellence—transforming complexity into consistent, high-quality, value-driven delivery.</p>
+            <p>I believe true agility is not just about speed, but about making the right trade-offs between pace, stability, and long-term sustainability—driven by ownership, transparency, and empowered teams.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Proven Impact -->
+      <div class="exec-card reveal" data-step="03">
+        <div class="exec-card-step">03</div>
+        <div class="exec-card-inner">
+          <span class="exec-card-label">Proven Impact</span>
+          <div class="exec-card-body">
+            <p>Delivered enterprise-scale programs with predictable releases, strong delivery governance, and consistently high release confidence.</p>
+            <p>Enabled faster time-to-market, reduced defect leakage, and maintained zero critical production defects across complex, multi-team environments.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY HIRE ME
+══════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <span class="section-label reveal">Value Proposition</span>
+    <h2 class="section-title reveal">Why Should You <em>Hire Me?</em></h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🎯</span>
+        <div class="why-title">The Rare Dual-Track Leader</div>
+        <p class="why-text">I am one of very few professionals who brings <strong>genuine SAFe Agile delivery leadership</strong> and <strong>deep QA governance expertise</strong> together — eliminating the gap between delivery speed and release quality that most teams struggle with.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🏦</span>
+        <div class="why-title">Domain Advantage in Regulated Sectors</div>
+        <p class="why-text">13+ years in <strong>banking, payments, and fintech</strong> (DBS Bank, CIMB Bank, Climate Impact X, FinTech platforms) means I understand compliance, SWIFT, and regulatory risk — not just sprints. That's a competitive edge no generic Scrum Master can offer.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📊</span>
+        <div class="why-title">Every Outcome is Quantified</div>
+        <p class="why-text">I don't just lead teams — I move metrics. <strong>28% sprint predictability gain. 40% regression reduction. 100% milestone adherence.</strong> Every engagement has delivered documented, defensible, business-impacting results.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🚀</span>
+        <div class="why-title">Enterprise Transformation at Speed</div>
+        <p class="why-text">I have a proven record of turning <strong>underperforming delivery teams into high-maturity, self-organizing units</strong> — elevating Agile maturity from Level 2 to Level 4 in 6 months, eliminating critical defects across 10+ enterprise releases, and driving <strong>measurable business value</strong> in every program I lead. I don't just execute — I <strong>transform</strong>.</p>
+      </div>
+    </div>
+
+    <div class="why-statement reveal">
+      <p>I don't just <strong>manage Agile ceremonies</strong> — I engineer delivery ecosystems where teams are <strong>empowered, metrics are trusted</strong>, quality is built in from the first sprint, and every release lands <strong>on time, within budget, and defect-free.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CERTIFICATIONS
+══════════════════════════════════════ -->
+<section id="certifications">
+  <div class="container">
+    <span class="section-label reveal">Credentials</span>
+    <h2 class="section-title reveal">World-Class <em>Certifications</em></h2>
+    <div class="cert-grid">
+      <div class="cert-card"><span class="cert-icon">🏅</span><div class="cert-name">SAFe® Scrum Master (SSM)</div><div class="cert-body">Scaled Agile</div><div class="cert-year">2025</div></div>
+      <div class="cert-card"><span class="cert-icon">🤖</span><div class="cert-name">AI-Empowered Scrum Master</div><div class="cert-body">Scrum Alliance &amp; SAFe</div><div class="cert-year">2025</div></div>
+      <div class="cert-card"><span class="cert-icon">⚡</span><div class="cert-name">Atlassian Jira Certification</div><div class="cert-body">Atlassian</div><div class="cert-year">2025</div></div>
+      <div class="cert-card"><span class="cert-icon">🎯</span><div class="cert-name">Project Management Professional (PMP®)</div><div class="cert-body">PMI</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><span class="cert-icon">📦</span><div class="cert-name">Certified Scrum Product Owner (CSPO®)</div><div class="cert-body">Scrum Alliance</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><span class="cert-icon">✅</span><div class="cert-name">Certified Scrum Master (CSM®)</div><div class="cert-body">Scrum Alliance</div><div class="cert-year">2022</div></div>
+      <div class="cert-card"><span class="cert-icon">🔍</span><div class="cert-name">ISTQB® Advanced Level – Test Manager</div><div class="cert-body">ISTQB</div><div class="cert-year">2021</div></div>
+      <div class="cert-card"><span class="cert-icon">📘</span><div class="cert-name">ISTQB® Certified Tester Foundation (CTFL)</div><div class="cert-body">ISTQB</div><div class="cert-year">2014</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SUMMARY
+══════════════════════════════════════ -->
+<section id="summary">
+  <div class="container">
+    <span class="section-label reveal">Professional Profile</span>
+    <h2 class="section-title reveal">A Leader Who Delivers <em>Measurable</em> Outcomes</h2>
+
+    <div class="summary-grid">
+      <div>
+        <p class="summary-text reveal">
+          Certified Senior Scrum Master and <strong>SAFe® Practitioner</strong> with 13+ years of enterprise Agile leadership across <strong>banking, payments, and fintech platforms</strong> in APAC (Singapore, Malaysia &amp; India). Expert in leading 4+ cross-functional Scrum teams of 30+ members, delivering <strong>100% milestone adherence</strong> and 28% sprint predictability improvements through disciplined PI Planning, governance, and risk management.
+        </p>
+        <br>
+        <p class="summary-text reveal">
+          Uniquely combines Agile delivery leadership with <strong>deep QA strategy expertise</strong> — reducing defect leakage by 32%, cutting regression effort by 40%, and elevating backlog readiness from 60% to 95%. Proven domain knowledge in <strong>SWIFT, ACH, RTGS, FAST, and Cross-Border Payments</strong>. Open to Remote, Hybrid &amp; Global Opportunities (Willing to relocate) for global Senior Scrum Master, Agile Delivery Lead, or Program Manager roles.
+        </p>
+      </div>
+
+      <div class="summary-pillars">
+        <div class="pillar reveal">
+          <div class="pillar-title">⚡ Agile Leadership at Scale</div>
+          <div class="pillar-desc">SAFe® ART coordination, PI Planning, Scrum of Scrums — leading 30+ members across 4 Scrum teams with 95%+ sprint commitment reliability</div>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-title">🏦 Payments Domain Depth</div>
+          <div class="pillar-desc">SWIFT, ACH, RTGS, FAST, IDEAL 3.0 — 13 years of banking and fintech experience across DBS Bank, CIMB Bank, and FinTech platforms in APAC (Singapore, Malaysia &amp; India)</div>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-title">🎯 QA Governance Mastery</div>
+          <div class="pillar-desc">End-to-end test strategy, traceability, AI-powered automation (Functionize), SDLC/STLC compliance, and audit-ready governance</div>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar-title">📈 Data-Driven Coaching</div>
+          <div class="pillar-desc">C.O.A.C.H framework, Agile maturity Level 2→4 in 6 months, executive KPI dashboards, 30% team performance uplift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CAREER TIMELINE
+══════════════════════════════════════ -->
+<section id="career">
+  <div class="container">
+    <span class="section-label reveal">Work History</span>
+    <h2 class="section-title reveal">13+ Years of <em>Progressive</em> Leadership</h2>
+
+    <div class="timeline">
+
+      <!-- TAO Digital -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Apr 2025 – Present</div>
+        <div class="timeline-role">Program Manager (Senior Scrum Master &amp; QA Manager)</div>
+        <div class="timeline-company">TAO Digital Solutions · Hyderabad, India · FinTech &amp; Payments Platform (Global Automotive Client)</div>
+        <div class="timeline-body">
+          <div class="timeline-highlights">
+            <span class="highlight-chip">✓ 100% Milestone Adherence</span>
+            <span class="highlight-chip">✓ +28% Sprint Predictability</span>
+            <span class="highlight-chip">✓ +22% Team Velocity</span>
+            <span class="highlight-chip">✓ -40% Regression Effort</span>
+            <span class="highlight-chip">✓ Agile Maturity L2→L4</span>
+            <span class="highlight-chip">✓ -35% Sprint Spillovers</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Led end-to-end PI &amp; Sprint Planning and Scrum of Scrums across large-scale SAFe Agile Release Trains — achieving 100% on-time delivery across 5 major fintech release cycles</li>
+            <li>Implemented C.O.A.C.H framework (Clarify, Observe, Advise, Collaborate, Help) driving 30% improvement in team performance and delivery predictability across all program increments</li>
+            <li>Mentored and coached 30+ team members on story-splitting, INVEST principles, and empirical delivery techniques — resulting in 22% velocity increase and 35% reduction in sprint spillovers</li>
+            <li>Applied MoSCoW prioritisation with Product Owners and INVEST principles to ensure well-defined, sprint-ready user stories — improving backlog readiness from 60% to 95%</li>
+            <li>Established Definition of Ready (DoR) and Definition of Done (DoD) standards, tracked delivery health via Burndown/Burnup Charts and Cumulative Flow Diagrams — reducing scope churn by 30%</li>
+            <li>Implemented Functionize AI-powered automation and JIRA Zephyr Scale governance — reducing regression effort by 40%, accelerating defect resolution by 35%, achieving near-zero critical post-release defects</li>
+            <li>Elevated Agile maturity from Level 2 to Level 4 within 6 months through structured maturity assessments and retrospective workshop design</li>
+            <li>Managed cross-team dependency alignment forums and risk mitigation frameworks — reducing cross-team dependency delays by 35%</li>
+            <li>Developed executive Agile dashboards (Velocity, Predictability Index, Lead Time, Cycle Time, Defect Leakage) — improving governance transparency by 40%</li>
+            <li>Ensured 100% SDLC/STLC compliance and audit readiness within a regulated fintech environment throughout all 6 major releases</li>
+            <li>Drove PI Planning readiness, cross-team synchronisation, and scaled delivery governance across 4 Scrum teams (30+ members) within SAFe ART structure</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Climate Impact X -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">May 2022 – Jun 2024</div>
+        <div class="timeline-role">Scrum Master &amp; QA Manager</div>
+        <div class="timeline-company">Climate Impact X · Singapore · Global Carbon Credit Marketplace Platform</div>
+        <div class="timeline-body">
+          <div class="timeline-highlights">
+            <span class="highlight-chip">✓ 95% Sprint Readiness</span>
+            <span class="highlight-chip">✓ -30% Lead Time</span>
+            <span class="highlight-chip">✓ -26% Cycle Time</span>
+            <span class="highlight-chip">✓ 6 Major Releases</span>
+            <span class="highlight-chip">✓ -30% Post-Release Defects</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Facilitated all Scrum ceremonies (Sprint Planning, Daily Stand-ups, Sprint Reviews, Retrospectives) — reducing sprint inefficiencies by 20% and improving backlog readiness to 95%</li>
+            <li>Introduced Kanban WIP limits to eliminate bottlenecks across web, API, and mobile delivery streams — driving 20% sprint efficiency improvement</li>
+            <li>Implemented DEEP backlog principles (Detailed, Emergent, Estimated, Prioritized) and partnered with stakeholders to align delivery priorities — reducing scope churn by 30%</li>
+            <li>Conducted Value Stream Mapping to eliminate delivery waste — coordinating cross-functional teams and delivering 6 major platform releases with 30% fewer post-release defects</li>
+            <li>Optimised delivery workflows by tracking Lead Time and Cycle Time metrics via Agile dashboards — reducing lead time by 30% and cycle time by 26%</li>
+            <li>Led automation transformation initiatives (Functionize) — significantly reducing regression cycles and accelerating release timelines while ensuring production stability</li>
+            <li>Strengthened defect lifecycle and release governance using JIRA Zephyr Scale — enabling faster issue resolution and controlled deployments</li>
+            <li>Enhanced stakeholder engagement by 25% through transparency dashboards (Velocity, Burndown, Cumulative Flow Diagram) and data-driven continuous improvement</li>
+            <li>Designed and governed Agile-aligned QA strategy — achieving 100% test coverage and improving UAT effectiveness through risk-based validation and structured quality controls</li>
+            <li>Drove business value delivery by aligning epics, user stories, and release plans with strategic priorities — resulting in a 20% increase in value realisation across teams</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DBS Bank -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Jul 2016 – May 2022</div>
+        <div class="timeline-role">Senior Test Analyst · Test Lead · Associate Scrum Master</div>
+        <div class="timeline-company">Quesscorp Singapore &amp; IBM Singapore · Client: DBS Bank · IDEAL 3.0 Corporate Digital Banking</div>
+        <div class="timeline-body">
+          <div class="timeline-highlights">
+            <span class="highlight-chip">✓ 98% On-Time Delivery</span>
+            <span class="highlight-chip">✓ 100% Regulatory Compliance</span>
+            <span class="highlight-chip">✓ -15% Integration Defects</span>
+            <span class="highlight-chip">✓ +25% Release Quality</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Led QA strategy for DBS IDEAL 3.0 corporate banking platform — managed end-to-end SIT, UAT, regression, and SWIFT payment validation, improving release quality by 25%</li>
+            <li>Facilitated Agile ceremonies, enforced quality gates across sprint deliverables, and guided estimation using Planning Poker — achieving 98% on-time delivery and 100% regulatory compliance</li>
+            <li>Designed BRD-to-test traceability matrices and validated SWIFT MT message flows for corporate banking transactions — ensuring 100% test coverage and reducing integration defects by 15%</li>
+            <li>Automated regression testing using Micro Focus UFT — led cross-functional release coordination, accelerating release cycles and improving production stability</li>
+            <li>Partnered with Product Owners to align sprint objectives with product roadmap and regulatory priorities — improving backlog prioritisation effectiveness by 30%</li>
+            <li>Directed end-to-end testing strategy (SIT, UAT, Regression, Functional, GUI) — enhancing release quality by 25% and reducing production defects in a regulated banking environment</li>
+            <li>Coordinated cross-functional and external vendor teams during production rollouts — reducing post-release incidents by 20% and improving release stabilisation timelines</li>
+            <li>Led SWIFT MT message validation and payment integration upgrades — ensuring compliance with global banking standards across 6-year engagement</li>
+            <li>Leveraged Agile tracking tools (Jira, Confluence, Trello) — maintaining 95% adherence to sprint timelines and governance transparency</li>
+            <li>Removed sprint impediments and managed team conflicts proactively — ensuring 98% on-time delivery and maintaining consistent sprint flow across all Agile cycles</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bell Direct -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">May 2014 – Jun 2016</div>
+        <div class="timeline-role">Software Test Engineer</div>
+        <div class="timeline-company">Persolkelly SDN BHD · Malaysia · Client: Bell Direct (Online Share Trading Platform)</div>
+        <div class="timeline-body">
+          <div class="timeline-highlights">
+            <span class="highlight-chip">✓ -30% Regression Time</span>
+            <span class="highlight-chip">✓ +25% Defect Detection</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Executed regression, functional, and GUI test suites using Telerik Test Studio — reducing regression time by 30% and improving defect detection by 25% before UAT</li>
+            <li>Collaborated with business stakeholders to clarify requirements, performed UAT and system testing ensuring platform stability and high user satisfaction</li>
+            <li>Utilised TestRail and TFS for structured test execution, defect tracking, and audit-ready documentation across online share trading platform releases</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CIMB Bank -->
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--gold-dim)"></div>
+        <div class="timeline-period">Nov 2011 – Apr 2014</div>
+        <div class="timeline-role">QA Consultant</div>
+        <div class="timeline-company">3i Infotech SDN BHD · Malaysia · Client: CIMB Bank (Core Banking Transformation — SIBS)</div>
+        <div class="timeline-body">
+          <div class="timeline-highlights">
+            <span class="highlight-chip">✓ 100% Defect Tracking Compliance</span>
+            <span class="highlight-chip">✓ 4 ASEAN Countries</span>
+            <span class="highlight-chip">✓ +20% Regression Efficiency</span>
+          </div>
+          <ul class="timeline-bullets">
+            <li>Executed automated regression testing using HP QTP for CIMB SIBS core banking transformation — achieving 100% defect tracking compliance across 4 ASEAN countries</li>
+            <li>Performed comprehensive manual and workflow-based testing, contributed to requirements analysis, and maintained audit-ready documentation ensuring software quality and regulatory compliance</li>
+            <li>Managed defect lifecycle using HP ALM and Quality Center — improving regression efficiency by 20% through structured test planning and systematic defect management</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     KEY PROGRAMS / PROJECTS
+══════════════════════════════════════ -->
+<section id="programs">
+  <div class="container">
+    <span class="section-label reveal">Key Programs &amp; Projects</span>
+    <h2 class="section-title reveal">Enterprise Programs <em>Delivered</em></h2>
+
+    <div class="programs-grid">
+      <div class="program-card">
+        <span class="program-num">01</span>
+        <span class="program-icon">⚙️</span>
+        <div class="program-name">Fintech &amp; Payments Platform</div>
+        <div class="program-sub">TAO Digital Solutions · India · Apr 2025 – Present</div>
+        <ul class="program-bullets">
+          <li>Enterprise-scale SAFe delivery for a global automotive client's fintech payment module</li>
+          <li>Led 4 cross-functional Scrum teams (30+ members) within SAFe Agile Release Train structure</li>
+          <li>Drove 100% milestone adherence across 5 major releases with near-zero critical defects</li>
+          <li>Elevated Agile maturity from Level 2 to Level 4 in 6 months through structured coaching</li>
+          <li>Delivered +28% sprint predictability and -40% regression effort via AI-powered automation</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <span class="program-num">02</span>
+        <span class="program-icon">🌿</span>
+        <div class="program-name">Global Carbon Credit Marketplace Platform</div>
+        <div class="program-sub">Climate Impact X · Singapore · May 2022 – Jun 2024</div>
+        <ul class="program-bullets">
+          <li>Agile delivery and QA governance for a first-of-its-kind global carbon credit trading platform</li>
+          <li>Coordinated web, API, and mobile delivery streams across cross-functional teams in Singapore</li>
+          <li>Delivered 6 major platform releases with 30% fewer post-release defects</li>
+          <li>Reduced Lead Time by 30% and Cycle Time by 26% through Agile dashboard optimisation</li>
+          <li>Elevated sprint readiness to 95% through DEEP backlog and Value Stream Mapping practices</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <span class="program-num">03</span>
+        <span class="program-icon">🏦</span>
+        <div class="program-name">DBS IDEAL 3.0 — Digital Banking Platform</div>
+        <div class="program-sub">DBS Bank (via IBM &amp; Quesscorp) · Singapore · Jul 2016 – May 2022</div>
+        <ul class="program-bullets">
+          <li>Led QA &amp; Agile delivery for corporate banking platform used across APAC (Singapore, Malaysia &amp; India)</li>
+          <li>End-to-end SWIFT MT message validation, SIT, UAT, regression, and regulatory compliance testing</li>
+          <li>100% test coverage, 98% on-time delivery, and full MAS regulatory audit compliance over 6 years</li>
+          <li>Designed BRD-to-test traceability matrices — reducing integration defects by 15%</li>
+          <li>Led platform across multiple upgrades and payment integration rollouts for 6 consecutive years</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SKILLS
+══════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <span class="section-label reveal">Core Competencies</span>
+    <h2 class="section-title reveal">Skills That <em>Drive</em> Delivery</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <span class="skill-card-icon">🚀</span>
+        <div class="skill-card-title">Agile Leadership &amp; SAFe</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">SAFe® 6.0</span>
+          <span class="skill-tag">Kanban</span>
+          <span class="skill-tag">PI Planning</span>
+          <span class="skill-tag">ART Coordination</span>
+          <span class="skill-tag">Scrum of Scrums</span>
+          <span class="skill-tag">Backlog Refinement</span>
+          <span class="skill-tag">Sprint Planning</span>
+          <span class="skill-tag">Retrospectives</span>
+          <span class="skill-tag">Inspect &amp; Adapt</span>
+          <span class="skill-tag">C.O.A.C.H Framework</span>
+          <span class="skill-tag">MoSCoW / INVEST</span>
+          <span class="skill-tag">DEEP Backlog</span>
+          <span class="skill-tag">Servant Leadership</span>
+          <span class="skill-tag">Agile Coaching</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="skill-card-icon">📋</span>
+        <div class="skill-card-title">Program &amp; Delivery Management</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Program Governance</span>
+          <span class="skill-tag">Release Management</span>
+          <span class="skill-tag">Dependency Management</span>
+          <span class="skill-tag">Risk &amp; Compliance</span>
+          <span class="skill-tag">Capacity Planning</span>
+          <span class="skill-tag">OKRs</span>
+          <span class="skill-tag">Executive Reporting</span>
+          <span class="skill-tag">Stakeholder Management</span>
+          <span class="skill-tag">Value Stream Mapping</span>
+          <span class="skill-tag">Change Management</span>
+          <span class="skill-tag">Portfolio Delivery</span>
+          <span class="skill-tag">Team Building &amp; Mentoring</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="skill-card-icon">🔬</span>
+        <div class="skill-card-title">QA Strategy &amp; Test Governance</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Test Strategy &amp; Planning</span>
+          <span class="skill-tag">QA Governance</span>
+          <span class="skill-tag">SDLC / STLC</span>
+          <span class="skill-tag">Risk-Based Testing</span>
+          <span class="skill-tag">SIT / UAT / E2E</span>
+          <span class="skill-tag">Regression Testing</span>
+          <span class="skill-tag">API Testing</span>
+          <span class="skill-tag">Traceability Matrices</span>
+          <span class="skill-tag">Defect Lifecycle Mgmt</span>
+          <span class="skill-tag">Root Cause Analysis</span>
+          <span class="skill-tag">Automation Strategy</span>
+          <span class="skill-tag">Quality Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <span class="skill-card-icon">🛠️</span>
+        <div class="skill-card-title">Tools &amp; Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Jira &amp; Zephyr Scale</span>
+          <span class="skill-tag">Confluence</span>
+          <span class="skill-tag">Azure DevOps</span>
+          <span class="skill-tag">MIRO</span>
+          <span class="skill-tag">Functionize (AI)</span>
+          <span class="skill-tag">HP QTP / UFT</span>
+          <span class="skill-tag">Telerik Test Studio</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">HP ALM / QC</span>
+          <span class="skill-tag">TestRail</span>
+          <span class="skill-tag">XRAY</span>
+          <span class="skill-tag">CI/CD Pipelines</span>
+          <span class="skill-tag">IdeaBoardz</span>
+          <span class="skill-tag">RetroTool</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ACHIEVEMENTS
+══════════════════════════════════════ -->
+<section id="achievements">
+  <div class="container">
+    <span class="section-label reveal">Impact Evidence</span>
+    <h2 class="section-title reveal">Results That <em>Speak</em> for Themselves</h2>
+
+    <div class="ach-grid">
+      <div class="ach-card">
+        <span class="ach-val">+28%</span>
+        <span class="ach-label">Sprint Predictability — Improvement</span>
+        <p class="ach-desc">Sustained across 4 consecutive quarters at TAO Digital through disciplined Scrum Empiricism and structured team facilitation</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">+22%</span>
+        <span class="ach-label">Team Velocity — Improvement</span>
+        <p class="ach-desc">Achieved by mentoring 30+ members on story-splitting, INVEST principles, and empirical delivery techniques</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">-40%</span>
+        <span class="ach-label">Regression Effort — Reduction</span>
+        <p class="ach-desc">Functionize AI-powered automation combined with JIRA Zephyr Scale governance eliminated manual regression dependency</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">-32%</span>
+        <span class="ach-label">Defect Leakage — Reduction</span>
+        <p class="ach-desc">Near-zero critical post-release defects across 6 major releases through integrated risk-based QA strategy</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">95%</span>
+        <span class="ach-label">Backlog Readiness — Achieved</span>
+        <p class="ach-desc">Elevated from 60% through structured DoR/DoD, MoSCoW prioritisation, and capacity-based sprint planning</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">100%</span>
+        <span class="ach-label">Milestone Adherence — Achieved</span>
+        <p class="ach-desc">Across 5 major fintech releases at TAO Digital — maintained schedule and budget variance below 5%</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">L2→L4</span>
+        <span class="ach-label">Agile Maturity — Improvement</span>
+        <p class="ach-desc">Team elevated from Level 2 to Level 4 in just 6 months through Agile coaching, assessments, and retrospective design</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">-30%</span>
+        <span class="ach-label">Lead Time — Reduction</span>
+        <p class="ach-desc">Achieved at Climate Impact X through Value Stream Mapping and Agile dashboard-driven workflow optimisation</p>
+      </div>
+      <div class="ach-card">
+        <span class="ach-val">30+</span>
+        <span class="ach-label">Enterprise Releases — Delivered</span>
+        <p class="ach-desc">Delivered with zero critical defects and full SDLC/STLC audit compliance across banking, fintech, and trading platforms</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     DOMAIN EXPERTISE
+══════════════════════════════════════ -->
+<section id="domain">
+  <div class="container">
+    <span class="section-label reveal">Industry Knowledge</span>
+    <h2 class="section-title reveal">Deep <em>Domain</em> Expertise</h2>
+
+    <div class="domain-grid reveal">
+      <div class="domain-cell">
+        <span class="domain-icon">🏦</span>
+        <div class="domain-name">Banking &amp; Core Systems</div>
+        <ul class="domain-items">
+          <li>DBS IDEAL 3.0</li>
+          <li>CIMB SIBS</li>
+          <li>Corporate Banking</li>
+          <li>Digital Banking</li>
+          <li>Production Support</li>
+        </ul>
+      </div>
+      <div class="domain-cell">
+        <span class="domain-icon">💳</span>
+        <div class="domain-name">Payments &amp; SWIFT</div>
+        <ul class="domain-items">
+          <li>SWIFT MT Messages</li>
+          <li>ACH &amp; RTGS</li>
+          <li>FAST Payments</li>
+          <li>Cross-Border Payments</li>
+          <li>Payment Testing</li>
+        </ul>
+      </div>
+      <div class="domain-cell">
+        <span class="domain-icon">⚙️</span>
+        <div class="domain-name">FinTech Platforms</div>
+        <ul class="domain-items">
+          <li>Automotive FinTech</li>
+          <li>Carbon Credit Market</li>
+          <li>Online Share Trading</li>
+          <li>Regulatory Compliance</li>
+          <li>Risk Management</li>
+        </ul>
+      </div>
+      <div class="domain-cell">
+        <span class="domain-icon">🌏</span>
+        <div class="domain-name">APAC Markets</div>
+        <ul class="domain-items">
+          <li>Singapore</li>
+          <li>Malaysia</li>
+          <li>India</li>
+          <li>Global Clients</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <span class="section-label reveal">Endorsements</span>
+    <h2 class="section-title reveal">What the <em>Work Speaks</em></h2>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">A rare combination of Agile coaching depth and QA governance expertise — the kind of professional who elevates not just delivery metrics, but team culture, maturity, and long-term engineering excellence.</p>
+        <div class="testi-source">
+          <div class="testi-dot">A</div>
+          <div>
+            <div class="testi-name">Agile Delivery Leader</div>
+            <div class="testi-org">Senior Scrum Master &amp; Program Manager · APAC (Singapore, Malaysia &amp; India)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">Led 4 Scrum teams, 30+ members, across distributed APAC &amp; global delivery environments — consistently driving predictability, collaboration, and measurable outcomes at program scale.</p>
+        <div class="testi-source">
+          <div class="testi-dot">T</div>
+          <div>
+            <div class="testi-name">Program Manager (Senior Scrum Master &amp; QA Manager)</div>
+            <div class="testi-org">TAO Digital Solutions · India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">Delivered consistently high-quality releases with exceptional leadership, ownership, and a rare ability to keep both teams and stakeholders aligned through every release cycle.</p>
+        <div class="testi-source">
+          <div class="testi-dot">C</div>
+          <div>
+            <div class="testi-name">QA Manager &amp; Scrum Master</div>
+            <div class="testi-org">Climate Impact X · Singapore</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">A trusted QA and Agile delivery leader who brought structure, compliance rigour, and continuous improvement to the DBS IDEAL 3.0 program — maintaining 98% on-time delivery over a 6-year engagement.</p>
+        <div class="testi-source">
+          <div class="testi-dot">D</div>
+          <div>
+            <div class="testi-name">Senior Tester, Test Lead &amp; Associate Scrum Master</div>
+            <div class="testi-org">DBS Bank (via IBM &amp; Quesscorp) · Singapore</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">Demonstrated strong technical QA skills and a proactive mindset — reduced regression time by 30% and improved defect detection significantly before UAT, contributing to platform stability across all major releases.</p>
+        <div class="testi-source">
+          <div class="testi-dot">B</div>
+          <div>
+            <div class="testi-name">Software Test Engineer</div>
+            <div class="testi-org">Bell Direct (via Persolkelly) · Malaysia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">Achieved 100% defect tracking compliance across 4 ASEAN countries in a high-complexity core banking transformation program — demonstrating meticulous quality discipline from day one of his career.</p>
+        <div class="testi-source">
+          <div class="testi-dot">C</div>
+          <div>
+            <div class="testi-name">QA Consultant</div>
+            <div class="testi-org">CIMB Bank (via 3i Infotech) · Malaysia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ATS KEYWORDS
+══════════════════════════════════════ -->
+<section id="ats">
+  <div class="container">
+    <span class="section-label reveal">ATS Optimisation</span>
+    <h2 class="section-title reveal">High-Value <em>Keywords</em> &amp; Competencies</h2>
+    <p class="reveal" style="font-size:14px; color:var(--muted); margin-bottom:48px; margin-top:-36px;">All keywords embedded across this portfolio and aligned with global Senior Scrum Master, Program Manager, Agile Delivery Lead, and QA Test Manager roles.</p>
+
+    <div class="ats-grid">
+
+      <div class="ats-block">
+        <div class="ats-block-title">🏃 Agile Frameworks &amp; Methodologies</div>
+        <span class="ats-block-sub">Core &amp; Scaling Frameworks</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">Scrum</span>
+          <span class="ats-tag gold">SAFe (Scaled Agile Framework)</span>
+          <span class="ats-tag gold">Kanban</span>
+          <span class="ats-tag gold">Agile Release Train (ART)</span>
+          <span class="ats-tag gold">Scrum of Scrums</span>
+          <span class="ats-tag gold">PI Planning</span>
+          <span class="ats-tag gold">Inspect &amp; Adapt</span>
+          <span class="ats-tag">Hybrid Agile</span>
+          <span class="ats-tag">Iteration Planning</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">📘 Scrum Concepts &amp; Core Practices</div>
+        <span class="ats-block-sub">Ceremonies, Backlog &amp; Estimation</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">Sprint Planning</span>
+          <span class="ats-tag gold">Daily Scrum</span>
+          <span class="ats-tag gold">Sprint Review</span>
+          <span class="ats-tag gold">Sprint Retrospective</span>
+          <span class="ats-tag gold">Product Backlog</span>
+          <span class="ats-tag gold">Backlog Refinement / Grooming</span>
+          <span class="ats-tag">User Stories</span>
+          <span class="ats-tag">Story Splitting</span>
+          <span class="ats-tag">Sprint Execution</span>
+          <span class="ats-tag gold">Planning Poker</span>
+          <span class="ats-tag">Product Owner Collaboration</span>
+          <span class="ats-tag">Cross-functional Teams</span>
+          <span class="ats-tag gold">Servant Leadership</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">⚙️ Agile Principles &amp; Theory</div>
+        <span class="ats-block-sub">Empiricism, Backlog &amp; Prioritisation</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">Transparency</span>
+          <span class="ats-tag gold">Inspection</span>
+          <span class="ats-tag gold">Adaptation</span>
+          <span class="ats-tag gold">INVEST</span>
+          <span class="ats-tag gold">DEEP</span>
+          <span class="ats-tag">SMART</span>
+          <span class="ats-tag gold">MoSCoW</span>
+          <span class="ats-tag gold">C.O.A.C.H Framework</span>
+          <span class="ats-tag gold">Agile Coaching &amp; Mentoring</span>
+          <span class="ats-tag">Continuous Improvement</span>
+          <span class="ats-tag">Agile Transformation</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">📊 Agile Metrics &amp; Flow Metrics</div>
+        <span class="ats-block-sub">Delivery, Flow &amp; Quality</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">Sprint Predictability</span>
+          <span class="ats-tag gold">Team Velocity</span>
+          <span class="ats-tag">Sprint Spillover</span>
+          <span class="ats-tag gold">Milestone Adherence</span>
+          <span class="ats-tag gold">Lead Time</span>
+          <span class="ats-tag gold">Cycle Time</span>
+          <span class="ats-tag gold">Defect Leakage</span>
+          <span class="ats-tag gold">Regression Effort</span>
+          <span class="ats-tag">Defect Resolution Time</span>
+          <span class="ats-tag gold">Burndown Chart</span>
+          <span class="ats-tag gold">Burnup Chart</span>
+          <span class="ats-tag gold">Cumulative Flow Diagram (CFD)</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">🧪 QA &amp; Testing Concepts</div>
+        <span class="ats-block-sub">Agile + QA Hybrid Strength</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">SIT</span>
+          <span class="ats-tag gold">UAT</span>
+          <span class="ats-tag gold">Regression Testing</span>
+          <span class="ats-tag gold">Functional Testing</span>
+          <span class="ats-tag">GUI Testing</span>
+          <span class="ats-tag gold">E2E Testing</span>
+          <span class="ats-tag gold">Risk-Based Testing</span>
+          <span class="ats-tag gold">QA Governance</span>
+          <span class="ats-tag gold">Test Strategy</span>
+          <span class="ats-tag">Defect Lifecycle Management</span>
+          <span class="ats-tag">Root Cause Analysis</span>
+          <span class="ats-tag">Test Metrics &amp; Reporting</span>
+          <span class="ats-tag gold">Traceability Matrix (BRD → Test)</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">🔄 Delivery &amp; Governance Concepts</div>
+        <span class="ats-block-sub">Critical for Program Manager Positioning</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">Definition of Ready (DoR)</span>
+          <span class="ats-tag gold">Definition of Done (DoD)</span>
+          <span class="ats-tag gold">Dependency Management</span>
+          <span class="ats-tag gold">Risk &amp; Compliance Management</span>
+          <span class="ats-tag gold">Release Management</span>
+          <span class="ats-tag gold">Capacity Planning</span>
+          <span class="ats-tag gold">Stakeholder Engagement</span>
+          <span class="ats-tag">Continuous Improvement</span>
+          <span class="ats-tag">Change Management</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">🧩 Value Stream &amp; Lean</div>
+        <span class="ats-block-sub">Lean + Agile Maturity Signal</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">Value Stream Mapping</span>
+          <span class="ats-tag">Waste Reduction</span>
+          <span class="ats-tag">Flow Optimisation</span>
+          <span class="ats-tag">Lean Thinking</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">🧰 Tools &amp; Agile Ecosystem</div>
+        <span class="ats-block-sub">ATS Gold Keywords</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">JIRA</span>
+          <span class="ats-tag gold">Confluence</span>
+          <span class="ats-tag gold">Zephyr Scale</span>
+          <span class="ats-tag gold">HP ALM / Quality Center</span>
+          <span class="ats-tag gold">TestRail</span>
+          <span class="ats-tag gold">Azure DevOps</span>
+          <span class="ats-tag gold">CI/CD</span>
+          <span class="ats-tag">MIRO</span>
+          <span class="ats-tag">XRAY</span>
+          <span class="ats-tag">Functionize</span>
+        </div>
+      </div>
+
+      <div class="ats-block">
+        <div class="ats-block-title">🏦 Domain + Agile Integration</div>
+        <span class="ats-block-sub">Domain Advantage Over Generic Agile Profiles</span>
+        <div class="ats-tags">
+          <span class="ats-tag gold">SWIFT Payments</span>
+          <span class="ats-tag gold">ACH / RTGS / FAST</span>
+          <span class="ats-tag gold">Cross-Border Payments</span>
+          <span class="ats-tag gold">Regulatory Compliance</span>
+          <span class="ats-tag">Core Banking</span>
+          <span class="ats-tag">Digital Banking</span>
+          <span class="ats-tag">FinTech</span>
+          <span class="ats-tag">Payment Testing</span>
+          <span class="ats-tag">MAS Compliance</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     AWARDS
+══════════════════════════════════════ -->
+<section id="awards">
+  <div class="container">
+    <span class="section-label reveal">Recognition</span>
+    <h2 class="section-title reveal">Honours &amp; <em>Awards</em></h2>
+    <div class="awards-list">
+      <div class="award-row"><span class="award-year">2024</span><span class="award-icon">🏆</span><span class="award-name">Agile Leadership Excellence Award</span></div>
+      <div class="award-row"><span class="award-year">2022</span><span class="award-icon">⭐</span><span class="award-name">Top Scrum Master Recognition</span></div>
+      <div class="award-row"><span class="award-year">2018–21</span><span class="award-icon">💫</span><span class="award-name">CARE@IBGO Spot Award — Multiple Recognitions (DBS Bank)</span></div>
+      <div class="award-row"><span class="award-year">2019</span><span class="award-icon">🏅</span><span class="award-name">SWIFT Application Excellence Award</span></div>
+      <div class="award-row"><span class="award-year">2015</span><span class="award-icon">🌟</span><span class="award-name">Best Performer &amp; Quick Learner Award</span></div>
+      <div class="award-row"><span class="award-year">2014</span><span class="award-icon">⚙️</span><span class="award-name">Test Automation Excellence Award</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section id="cta">
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="section-label reveal" style="display:block; text-align:center;">Let's Connect</span>
+    <h2 class="cta-title reveal">Ready to lead high-impact Agile programs, enterprise transformations, and quality engineering initiatives—delivering <em>measurable business value</em> across global organizations.</h2>
+    <p class="cta-sub reveal">Open to Program Manager, Senior Scrum Master, Agile Delivery Lead, and QA Test Manager opportunities globally.</p>
+    <div class="cta-buttons reveal" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="mailto:sardarali.shaik@outlook.in" class="btn-3d btn-3d-gold">✉ Get in Touch</a>
+      <a href="https://linkedin.com/in/sardarali786" target="_blank" class="btn-3d btn-3d-gold">🔗 View LinkedIn Profile</a>
+      <a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNiAwIFIgL0Y0IDcgMCBSCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMSAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZCAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjIgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago0IDAgb2JqCjw8Ci9BIDw8Ci9TIC9VUkkgL1R5cGUgL0FjdGlvbiAvVVJJIChodHRwczovL3d3dy5saW5rZWRpbi5jb20vaW4vc2FyZGFyYWxpNzg2LykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyA0NTMuNDQ0MSA3OTEuODUxMiA1MTcuMjE2NiA4MDAuODUxMiBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9zYXJkYXJhbGktc2hhaWsuZ2l0aHViLmlvL3BvcnRmb2xpby8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgNTIzLjMzNjYgNzkxLjg1MTIgNTYyLjkyOTEgODAwLjg1MTIgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzIC9OYW1lIC9GNCAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0Fubm90cyBbIDQgMCBSIDUgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDExIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTEgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iagoxMCAwIG9iago8PAovQXV0aG9yIChcKGFub255bW91c1wpKSAvQ3JlYXRpb25EYXRlIChEOjIwMjYwNDIwMDYwMzM2KzAwJzAwJykgL0NyZWF0b3IgKFwodW5zcGVjaWZpZWRcKSkgL0tleXdvcmRzICgpIC9Nb2REYXRlIChEOjIwMjYwNDIwMDYwMzM2KzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIgUERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgCiAgL1N1YmplY3QgKFwodW5zcGVjaWZpZWRcKSkgL1RpdGxlIChcKGFub255bW91c1wpKSAvVHJhcHBlZCAvRmFsc2UKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9Db3VudCAxIC9LaWRzIFsgOCAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjEyIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDkwNTYKPj4Kc3RyZWFtCkdiIi8sPkJlZkJaQDotJ2thMWZgQjxcLS0tMEppTE4iXWdpUWlOUHU1MEdUN1snQFY7QE8sQiNjXkdyKldrKUU6KCdrPTQyVF9KU2FrR0stQy5aclVlUSNzXlxoVCFOcnNcVyRQO3NkNkErSyczK0dOSi0yb01wWFJ1R1piRHVBYkQyaGkvYHFPMiEtW1MmX0Fjcy1mRjo/SEx1ZGlDVUBNLlctKyVBLkAzaU9IVHBaSXRdTURLQlZHK0hHUSFOYzA3KVIvTkZNRXE8WFZGUzhmUjxrX15MRGA2NShsT2NkciUrRV1IcmtiNEVlOzdtVFQnJic2XkNjNDs1Q1IqImBaakcnNE5BXW9IXURoIUYnPj9hbj9hdHNTYiMjX0lJLVRVSTdxUzBPUltoWiRVMkhtb2QsP2heODFJPSdBNT9YJ1Y3KmE0akNzNEJPOVdeKlxiakoqKzBgYG9NKk42SjJZZ29BRWJXUWtOIWdcX0FVVj5oZGYtPS4qXWhIT3RINGFdTzdAVEFsMjdELj8xKkxSUVpnVClHXTg/Y1EuJG9gXF0/a3FtUi9UQlQvZVw6R291TmJxcT8oOzQvR3NEUT5rMVwyIydALWRYbEttKzlZSyFyYTBFJSlka2ZCUSxETG0+bzhaOlk+LSxsJFxwbS4qZ3RBcmlpXmVKXjVoW1ojajlYNGp0YTRCJ3VXQWEjO0VHcktQR18yNjA9IjlbXCpXKTdvIklocj8tbEo8cnQhLUV0S3VKbkkxTEIiQTNFIzBiVjdiSE8pXXB0SVghbihEZUMxWUVlRmRaUEJWQ0FmK2g9KVVbJ2xhbERuXSdiaXIzTmctKzYuVj4mQGJPNVdsIklOK1MnTjdoMlwyWy4pcHJxdTl1QU5ALDskWT5VVXUjUGI5Ql4xNCJYJlNpYlMiJCtQdFVAVi8uQDRmM0hkLS0hbGIvPWU5RFUicVleIjNcNC9cbjkkNjgpMCRJc0NuZyFOOkFZP0tBVG40YU1AbFxIcyM0QVk0Um5ZJVJNQGJxKjJVZko8M2hyLlQrNmRVYV5SNUc8XD40KGB0WiNbUHQ5XS4iRUwpL19CTVU5OGdbPjsqOmlXPjkhZSJKU0AyIVJSNzpVQk1dKkhCWmQ/QTBGNzskQjEvNXNKSWgjaTdsamEuYkRlTVZWJydxRT5iNjpVMk9jZ2xZVlpncVRlPzYsayQ5JUVBUzZndCo+W04jX1E6WSVEMWt1aD0yMl5FQlJHZl84TktKR1dsRS1TK0kwc2EqQl9DUSJWbVBAZ01Qb05nQzZrNjtMXClPXlgwYlJJI1sjJDZCPUpGM3AsLTMlOSRRO1NAJC82UypfYjUpUkAhWjkoNiM/X0B0MEBUXCVQVnBfO0ZSMTFbbzQxa1AqLVJxPFIvMF0+ISwpJjdHY3RvdXUlMmdSbjpmZ1g3dDpGY0MkUz8vRTtgcT43dUJDRSNZcnBqdXNqIz1jUj80RXE7dCNCNXNFb1Nfc0hsYTFsbXMvZTZYXCgnPTNvc09Ic2FtY2hER106WCtJLkAzQm8/ND5mZy8wTipddDBCYUYnbj1HP3BZRD1ub29UXyFhJztFOXRjIiRtSlc6TVQ/Vl8lPi8iRE5RZVVnKGhXb1YucEZlYTJiY19JaDE3bkBFPjU3OHVWcSE4alIpP1YwYkByaC1jMSE6OS5WXGstSm4+VWA8bEpGRixNImArTF9qdGZnRGVpLiRWXD80K2hCaG9RXXI/PGNmRXRkP0JKKnNnZCRWLisjcTcoLDhDdEpLTElkTyxKalo+VEVjYlQ7KnEhZl0kLSohOyNzWV1PSCVvQUpiQDs0UyY8P0dLNHJJIUQqZSUmQCRcRyppIT9SX1FGZmRNI0pFJWYna1FaRFxuaCk7J2VqYi5WaSRQQ0NUZiddQCQsLnBKVktCQ0x1LVVbOHFoOzZVR1NmMTRJZTVPUTNfPFkuYEZET0E1UTVJcDZlQzYsLnJycVcyUHJkNTU1aXJsPW1cQDk3YFBHLDEidT49LUtQYiJoTmc7IlpnIiRrcmtUZFVlaVhzMTFbXl45NFchJE9USSVBayZRMDkuMFQ3VytndD89PVdfYEY7NDdfK1YkZGkmJlMzYD5CVUM8MVZmbUtgKikwUFBbVWc8XVBiU1ZQJFtCQGoxZS5xMChkSnJSVmM9Z2AwTmhUKV8uPHEmXyEiW15AJjApJU4mPVRzV3NtVzNiUydnbztPRldRPTJJKFJmUSdrdGRkL1RWOys2WjVXNUQzdG4+bCw2LFxdUVtBKFo/WjVZOVtbJj1qLi4lSSNGPUduLjNGaFRaTUpwMlVONUpIbGpjWG9EbWJsJDhgI0hiazlsTyY+X3FQQWtPWVZfXiooaUE9LmxYPlQzTyo4WSQsaG5tQ0kiSSwyQW02UUJLXl1OZ04tdGBeP0VBWGw8UioncnM9a0EvaUshXXIxbzFbbiZGSl4xQjZMNm0yQF8qbVRBXTNQaFg4QzUsaVwwZjk1TWcoPmxhbl06K0RNMEdZRTA1WV1SZmxCPCZyYFo8QERGLmEoMXRtPicyVC04X1dfOSZsJT44SDxRUkVPTD4sb2UuXEg2QCpLLzUxNCdJVGFFMUtWS04zM00iUkwjbGluZGlDMlIlZDNRJUBWXEhfc0I4VztPYipTV0FnQ1Y0Y0NJR143alpOVl0hNjNwMSZHamwzIjUsdEt1LDZISz5ZZC9tMiNEJyNAZkRiXGQ+Sj0xRidrdWFfXStqX3FHOnJpKS5uTUYwRjZTc0VxMiRDZlJlJC91cShoYWVjMCEpJ21BVSVOXSI2JjlFVWVBJDxcciNYWFdCZjdBTVFWUl8iTUk3S2BLLm9JZy9MLDEpMHEkcT5DbTBsN2lHdSI4VCttIkdzWDoyVTNpdSo1UjorQExrS2VwUzUySXIkQGMqPUtoMmQ8Q1gtWmosYi9DWlNzL0lvXFYkQypBLl8iN249SSwyJUUpKGJFbSpZcFY0XVcpI1RpNF9FJkdGLD40QmxmXjJqbUEiWzUhcTsqbTxyOjcjNG43VzlNVVVgIiRlS11EUFZPJFpeVlxwQ0NoUUphPEU4QSQxRXIlW29rS1RVRClaVjkiPCVWKj5cIV5edVsjJExmS0E1Oz0+JkRVUilBYy4pNSxwLzdqSS9IXFNjS1JdYmg4K2NBUztbLkQ5Uk10SlI/NEpvWHFkOFVcTWdPXVQ4OFpYNVNBLFo+OnNaKSsiZigiZkxacjtqJXVQOmdsJDdVLjtsSjYzUC1TS2UlYzNJOVR0Uk9CQCYjWTMoc3IzIUlXQk5iNCFDYGwpKyZAKjhxX2lCMD87ZUtzbjZeVFZndC5uK1tpZ0snTloxLU8tWSciZVlaMlxJcWBoRD1iX0k2OTtrTlwxIVJyQik4JVQ3TFFCSkgnK3BHU3VPWVciSWA/O2Zjc1I7ZTw7ZSFqckw5WGplNiwsNlVQbm0jYVklWjJPUStTIVxcMWRdS29dNUpLazBkRXUmaS1pamBiKUFbPCNsSyU/YD1pZSElJS44YiZcV3I5JXRTajUlalJqQVVMIVhGVHE7UWEzNkRXLWBacUg+SUEvNz4zPGpGI08uZDQ+SFRMUDY5KTw2UWgpNyxCSilkLztBYW1ecG1BXU0kLScxYi1SN0M7Z1tfSjxHKVxqXk9FaEU0bDZKSm5iN0tIcGRBczYjWUVFSUhwTkxHN1FaL2gkSyViTixVcD9AJzswcnJDSV5CR1w5PypDY1pNZTVcLjtCaHEiOEZgKzBldUJfY1U3bz8rZT9eciQqV1w0JTJhMjZxXHUxR0pyRC9EWGVCY0ApTyZPbzpiaG9TMz5JSzZKU2Q5I2xMZS87PVh1MHBKOzEoSXFEZmVJZ01vWjRIODlbNTRsSyczTUdVIytqc1xTaEhxTWRBL1d0WSlrMV1AMERtLmtzOSMxQTxZJkteSUUobXJyITIsajhAOVRTW0ouREN0X2BqMnRlbmRmIW9jbTo4OnJrK0dOSkoscTs4V3JbKTd0P0BoNUsiUVZsWF5zTE8yUS46Rk5obUxZQ2wjYD0iQWFNJChAZDlnWFkiVExLLkV1V0NTX0BwQi5yVCFXRC1fNFpuZ15HXSZxNVhTITYubiVgU2Vjc1w3MW4jTyxOV0lJTlwmPiwlVm9uISYrUj0hajYuTWo8W0VZX2VgQERkbU5RRWFaJ1snIj5EMDEkQUBvIXFBb1pFKD09W0Q6a1lUSCJwaCxLIU51XVRNLVdqTlhwTztaIkBhcGtpI1xJWE9xOUtGTlhJLy1CKW5gRFVSNz81SktXNWU7JEVAcS5ObVVQKidkVj5tTmAkKVpWOTBVUSR0R1IhOW1tWzkzMWZMTV5YSzE7Kkc2TjRpUyVFJkwlTDFgKSVVYTpfajVBOFM4cW8kRHNQSnE+bSw2akhjTSIlQig4TiksNF9eL0pWWkBQL19LZFNUNiU+MEcoISpNRD4vbC9ebjo2aWRIJ2UxK3Rucy1rRS9dPXFlZStuTmVUSlJnR1BjNWZLKWhcSTo6YD5yckE4MEpuOWcibGdKdCNxIz4hakUoRk84ZUpqWjlhMTNDaF9GbjhyIktfW1clInIzYm9WcGUhMl5gYGoqOF8jYXRUc0U8QVx0bW9dTUQiTHVcKTxiUVwxLDBSL2JjO0FocDJNPDRZJ0EzKjY+RF8+Z1A+YEBXUCFtNlMvSnIjZzZBSGFnVzE7YW5eSjwpYC5LOmAzLmlrTzIvOEFZQkBEIXJiWWhaVj0lO05nNUdrXCInJzFbSmtDPiJAbW4rMDUvUFE7JjE+O2ZxVTomUCpgQD47ISsjUlhwbm5nci4nWCgyN3JocERBQ2EwWS5fQD1MZkokTC5HOUdYdT8pSGlzInEjJU5OSWwhUDZLOydKLWdOXTNzbD1UZVRJUG9rZltEaShLQWtEYUdtUihDUzp0UUpFUnA5azJDampLTW5cUnJHK2EubWYmTSgnPFBPRC4zKSgsIVhzX0U3N2tgKTVbU1duWVA7KmE4aVQhOCwqSlEjRih1VWJLK2FtLDxtZy87KWVIcjZjK0JrRVZZXlMhYjNeb0pBaFtOcEhTVy0paVkwLEsxUTIsT2BObVc2TzY6KkJILypdISIhKiNabjlrTzB1Z1Zebi4mdFRYTzdDK2hLLElMO01uIyxONU84dSxSX1NeVDY6ZyVsZ0tjOD5ZZDpiYmNwYipfbGkjSjdzZkU6JHRGITFGU1M7RFksZyxmM1dzbE9NOlNsJkBMRXVZNSklMkxQW2tcRTtkYT0lIUBRaT87UVhrTyhrWDcqVVFDdXNaWGZMZyxrKDVoamFxU21fPVZmUkcqaGVIaScpNWdCNiFiSj0+PDRHY0JVTF41IlFSS1VNZiRzaSwjL05FJms1KiMuTCxGbmNGXU87ODVyNXBMMV5GR25MZHMrPmNAb0ArTUlgL05pS0QrXUQqUDo9QTUqNVkxTzZpXGQhc0xXaUpRRVc1STs/KTJAYlJoaF5BYDBPakNIb0ViN2Y8Q3RWJjs4dUhiMWkuOmpHQmUlLDhLOmdSRS5rNylDQWtRZS0mXlsvQ0g7SyQ/dE5KKSJLbjVFVmtRMy5gK1VvMENpLEEtcmFYaS5IUVFSV1s8O1diV1hHOiQtVWNrLjYwLC1QKSkhNj10Sks/I3FscjFCI2pTX2RqISZhPUUiWnRaVl1INlxtdWxdXzU+RWk9KUZKU1Mya25HIl5sVXBtPXVSXiV0SW0qY1NCUEg1LFtDN29jWzYpR288VlZGJDBFVDk3WVdZVmVQSi1sPFArSSQ2WF5JJ2wua0dXdWA6YGBDOiYpM1cyUGxhaUEoPClvTV01cjtBNmQyXi5hbWhOInVoVls8YypiWz9lZ1k2VSc9ZWQ1YEE/N3BlUUJEMEs1ZWpsRmVYMSxIOjE+PjJEWmA+Sz9qUmo2YkBbYW5IXCc+IU9bW1hPKWFjOSk0Z0QqZGA9T1Epby8kT3Veb2QoMXIjRklHNExVPUwzZyd1PT5SIS1lUGpwIUtMKWEhW0QkIUc8UWpGQT4/U2FTTktNPlBaMDZAblloYDxbWW4wSiVUTihBckZCTnNyZ21WOjNbbCpSRTNJXnAxPUZBcERzJWllYVAkIyEwNTxfTmJmXFZFRSJhUzVRN2RUPixrOmRhPSRyOHBnJkxVcmVuMUpqaUhdLElhVlFFNlpkYEhzLE5TQF1zKEpHUFNuT2RpRGs1bmNwI1NHUCo0Q0hWQDAmbz9BPl9DZ1ZPZzQ9OUsoRWNjNF9PODZzU2BdVS1DbzlePTtjWUQkUzUjcUBFVD8rQUFwZUBjOlA2Mz5rZUkqKmYhUFA2IV8rSFkoZDtJdFNtNUVeaCU+Kmo6TypnSWVxUzVBcmtebEtDZGVJX1wiKEpsIzxLJDhSVDhLXkE+NmBXISxtW248I2xTOCEuU0dGYS4pQSFiJU1ML0dwblM5Y1kqbGBZRDAxPztEb3IpRlhOPlxRIV1TXWclVHBTNW1xTVAkPWZvLmozQjs2R3JfQ2M0b0guaURxRyhxT0RXJz5NVT1HNnUzVGAuQWcnP1krSUtyKGEyTy9MKGxsJEY8KFcuNFRHVSdocWA/TCVdcionbG1DZXNYY11rajE+U0NVLGIpJmBkPFIrKG5DUjRvR1NDajhxSkhcVSFpKjZqZ2JdSlxtN15mJmRkUVYrdV5LYkZrRj1ub29lI0MlWFg6UXIndSJxYDksSGMjR19fck5qUGFPZ0VBSjIhYU1CMCNNNiI9OERjKC5DbjEzYW4iUit0JTZtMTYvMWlpOmpHdG1daShTQWxYW0NtMC0/azRbaU9ESFYwPGRBTl5xZkRZN0hYRypnJDU9T21iTT8uSy9vQ2lrWm02Li90cGAxaDRGXiZMYz4qN05fSUg+Rk8iQyxidFE2L1ZnQ0l0Y3Q6QnMwSVckcl8ybz0wNUQpS1JhVzJEOjRwJkNyUiNTMC8odDhLRmE+MVw0RWVVX1E2OUZBZUAxNjFBL3RIKmxjU1k7PU9rKl5NS0wpYVw+WStmVDdzOjhvT04vLTxuVFxZMmk0OkNXaU0mVVNdNkNgNj1SXyVfNS1scScpKUNlKkI1Q0FTJTUpS1BeY0loSm1OPl0nSSs9QjNwMF0mWF85akN1dTk+Ol42PigkWllIJFtKRC5NKm1qTWZhV3NUZS46MCNoaCtIaVduKEFENWxARTlOOFM/RTVXLGVKOSxGSF4uXTxJTnRWRD5GSU49IjwhWmRRS2k+SUFGXT5MbUU+TDpZZkdMSXElVSRMa1BbZVteVFckcl80ayc5N1ZsYWE1SnFMXl5xIj8sMzJsOXE0RE9AUzdrYm1tTSdUaTNgYSEtXDBFVE9bWUooPD9oV3UmK2VRQVBoLlBLVTs7UlhgZCJiIUdobl1MVllucWNAMlZiNiUhV09QLllULnEmQGtuYDskbFlLYkBkWUglb0xEV1JINyhcYW0lJnJjL0hkLUs1LllbLTAmLkk2IUpPaTgnOlNRbCFsNS9UTlN1LD45bGcwMElYU0lRMWo5MTo4TXM9KVBqbEhEQnFlQENGaVB0YjIpTSsucDtzSW4vRjEmRWZPMzZhTkJDPVxlQy9jZ0oqWGYkajkwcGBNZmpxbURUZHE/ZWFmZiF1MjJqPzJgXE9TRlddPW9CKmk1Zi9RM0BaRWQ3IiVfMFlPcSJabEs7XUhHJmFuJ1RlVSFIXyttRU4nQj1DTSpAcTE6PS5tUXBFcF0zLSlJbGU5X2FVTUM4N1lDQHRmR01nZERHbVFyWlAlS1ZFI0tSTUFUM05kb0BsImItS101LVQ0VzBCRzBZJTplcyM5MjdwLF9CVGRXQGFEZm4vcj1RK2FGTUhqQSljUz9cKDoqa2UoWUheODlTWS5HYShvOjMpRVE4ckZyTilyJSJnM3JqUmhqKz9lZFUxbWNbWjJNSiNSNmU4X2lXT0okQFlLJzJJSyRBLSczcnRMdEUlXXBOIVoxMCJCSWQxJFhoU2pAYS5APGtLVzNvVjhWZ1paM084JSY5YjcuTjFmLFcqJFhNNUMhPjJfW1FaUVlYWUxxcylnXWU0aTwjQidLXVoncDs5a2MkPmEzV1MnXElhI0c5KihDOjNHJGZjLWYzLDdxNmA2KzZPUyEkM2A4Zj9AT15xSm1ULkMvU1VYQVJVVzFMXzAvLC0qKFo0Ol4xRDJfMjROXDMoNjd0al9QZi87O2FRUTd1WTtoZTc9ZDgrTUQ4aCdQMEwjaTYtJCIuUnE2RVolYEJNQXNLYGxfZjhIKSonNk0oWi5wZTlIVlpHaEY1Y1IzIy9IJUcnPi5TL0ciUWhJKUU4VitpXEZyU186MmQ1PUBYM1xNOzQubyk3M1gnKExyOUtuZjBUb25aV01Ua1BEMmgvTVhtU1ApMzdDL1VbVE8saXRUSS8iPjxMcVdCV25PXGVWUzFdSzJFXzk1InQuKV5rJik3UFY9YWhqMnVHM1xTJyUhUj83SFxEZnBCSmxNXydzLUcjRT5rUnAxJy5uMEJCYHJwUDpzXnFBLnNcW0NNPTBVR3F1cUg5VXFRRlclNyQ8YSRsMT4jUF1nL2kpNzdkRjprRjNwJVwvbnBvYXBrO21RJlI7NiJNSzxxWiQlJldgcCJWSmE2bGdNP007W0NwR0gnKnE+XyhGVTpHOkVBZENVUkhgOWZgLkdIYCl1RGpEZCdKYFA7NChaR0pAbUkqM0JIY08zckgvRmRcKklvbVd0Qic+LSVWMjE4Ky1wXTohJGtMX1cpLjM6Z0tSKSxYNCdIT0Q9aypxZkpcRS86UDxUSTooLCNBSDdbPzo9a1N1LS91OnMiMlI9YSotOzRIOGZDKiddVjZrcExOQm5Qaz8lOlotO00tOEAwdUskRElhIypnTDA+R2Y/dUo7V2Z1YiVvWEVRLkt0XlhORz1pKDh1ZXByciEpKiFrYGpaXy1Mbjhnc21fZFIsVXVeTEcrKDk7KS1OMUdfbE8uMSNmMXJYdXUuUj5dbmNVJ3UqcTxXMV1JP2dtdWxGRFxPYCliJWw8VWZhKkM0RzZfM0hqKGM8aGdTKiNbQmE6O1tlX0BpMV0iPVIiP0hJNHQhTkFAcThqOWwzR1ZANUNsYlxjXmZqLSNBKDw6SlMrKWthb1NmSTc7TDRAN0ppYz4+VGMrKjoiWEMxL2kubDtoVXJCRS4vcWFWPCM3L0cjImI0YF1SVVBXbWdpaFQxT0dMOWZUJG9KcFM6WEhbZk5WWSN0Syx1YVYiMFdfajVkIUtoVEAvKSkmLWJXPXIhM05wbTJKdUFITnAsczVmS1IvKnQxdSE6VCY6dSVgbWknSjBpRixmTUVWPkhjT2pALVMkVGxuWCovKVA2M2AtTi1fJGpFK1BGT1w4LTZ1JHQxIUEuOVVlNCUmKUZFWS5YXyZEKyEndEBuXT5ARUpEbjNKRDhALU1JQ11YKzxRT29BVEJuY2EiYS9cVWpfOXVZPCg9Kkw1ZHFZWE0iO18rUTdiTDVaUT8zLCVHZi0hcSwuaWk9Om5AJTJeJCMybVU8T1NbQyw9WCpBMlhSUCtsPDkrXiFqLD90O0EjMzRzMj1XVylxS2l0OFJJcl0vQ1JCcGZPb01wcSpQK3RmOGg2dVVDVyxBXCJoJGZuSkY+Z0dwYF1gK0dsW1lnSS4oSywkT2Jvbz8vJUJJbjRxUmJKJVwtRnUvX2dROWQybWZMKjZZVD1AJ2FIJSZTIWVKIi1NYTFdISUlMC9kNVwnL3NfdSpHI2ptVU5sVkFVRFVXOzxWX2U9Sz8qJWdtVDVgSSE0aFhwOGdTMSswPkJUc1BbOHI9SEJwNyIiX0RrbWJKNnM9SyJmRGxKcGZXLGU9UmBha0hza0RwNTRzb2FMaGc3TlNLSDNeM1NtOHQwblhnZG46VlxTVFYqS1M9cU9eU0gmXnU7TGkkJzRaOEEsWWI5USxpTU9yJV5fV05iZiNIWHNzWVVwMyk+cyhvOmg5NWk0JkJDIWEkKlMzT0dcZSZlL0pZU1ZhKl8rYzJHQF9pW1cucChFUDE5Nl1AQW8jSUonKkxxInVKIS1IUCtjb0JVIVFLKyQlS3BAPCdMSzYtIy5Ya1o+PDozUTslbUIzPlhbI1FYXjI4J2g7TyJkXERJaGNsYVhgTFZgW2s8Ji4lK2xAKVdhKS5rb044YFglMlUyQjtkSlk/SEpgcmRQX2tbXUhWMjNOTU08c1hkYTY/RWhZZCNSVUlOdT5IYTMvYi4iMkNDVVB1Mi5hWUpgVipwbExnJG1eWHBlWCNXLEZnallkLzY/I3FzISdFXyJfXDA8NXMhI2AndV5UTU5GQVkzVkpTSDUoN21zbio+LGtoPVJUQVJELSR0UypRY3E3bGw5JlFAPTw7YCFvcTlCN1chMXMpOFFQYDxlITUnMUs6KD06MWkzSi8mZGxjaEFYIkE4JldPTi1ZM2hjJlguKjw9JmRpYFdZNEUsYWhEWXRIM2MkdFZZalxeLWxLPz5XQkBuNE1lcFdmREhyT2Q/QEhoayZEM25XJGY2MyEpJCM+JEgwI28hcWFlMj5TamlUY2cqOjIlWSZwJjxSc0ldRlchaCI2SUFGJE5vIi5YQHBxXSFiQ0M8IW8kU1dHaz1NTUxNMFptSkFKPEZnay5YQltIPW0pVVAiZFpYTmozLkdzIkg6MSgmaW1UNmtYP2pJQSQvRUVecitgR0ErYDUjNEppbWJuRydaLjc2ZUZzQCdtW3BONzBXLy5wQkUtLz8nXUZRYk1vU1VoJnF0KjZOSWJjV1RaOWltSCdJNzQlbWI0OEczTklMKWxBVnVYIyRVajFpLGJRLUc7IT1dIlJCSzwzaEFVT0FtWzxKPUhTay49SjlWZzhUQTw+cm00QT43JlNiWD1FQWpEUzpuX1VVOUNZSWUzKU0mOV5naitpN24wOUFxOFVsITwtR0wnUXMkZlg7cVszcGAhUGdPZ2k8ZXAhcGUuODlQUmtGalBob2IibyhTc08oUzRGQXMrOUctaGZWYGhMZV0pZkUhKDFRZnRFLFhCbmRKbypDay8raEpoNzdsWllHY20/PTsuanEjcG5mUjdWU1stX1AqZiwiJzhpcTdfXD9TST1OMkxbPUtWV0c9MylNYDYxPSpGdCcjOTcjU14jXzcoRm1oPXFfN2ZbISZvI3UiQzpeVERGRj42Wk5IZTJUSWFYKCxnSEZQW0klI0AmRTRtVVM3MyRwJExCW1pNUF9DV0NPUjEzSWY7PmkxNGopP3NnOUQ+bi9jPTFGVGNldUc1LFsybWIkIjFVJ2doYHEidCc2JGwkU2pUKlhzX1BRKitpQWUmMlgmKypcLTUyMFJPI1w1J1dHUTEob1cuSy5aaG8qSElAYVxUJXNMTkc6RCdwa0QwM2ZQLl5IakZJOzRzUSVQaC0lPF9HUiY9TkpRP3VCRyllXCdAPSNZPW1ZdVwyX2RmIzZiJiReJlksVSs5SjptXjctTUo8VWdCczthLzpBZ1lJRCNLIjM/MDJlcXE7cFptYm5GW0lbNElIPj4+W3Uxb0Q9dFFRc0hHP0lecztCKDtuMlM5LGVQMmZaZjsydTlgQjBnIS5lcDBYQkFFT3IpUU0nOEZjMU48Si44WickOWo/InRJJCwvPGddUShOOGtGcjsyW3UlKFJZZyV0XUIxSD1Rbm9mYyRKK1pUJD5RVlFuI1lxKVpVP2hxblFHQ1BlVCEyYiUjLnVfNS1ZUWZrciQ1V3VZZmVlamduRkZSa2pbbD1GZTJXZT0hajomVDt1R0xORVdSI1pvMikrMEk0KlduLmUiLEZ1QjJUXV5kUnBePiJhRUdQWyNLKW5TbGRCJyxTQ1xONGQ+WChkVVdKMzAlSnBHMCJ1T2hdIz1oIzpYQyVcWHIqTWYsSEpVO2EzNUhHZCRzOURpJ00kQ2VBJUVdKHNUakdvTE5aYE1BRCxvI0ZMSUwuKzVnRyJOZGEqc2JsZm9oXV89P1FmMUVhS0dRYjMkaj9WZVxdUkw2JlRXcCFvWUdbZ04/I0dONHJWK1w9UjVFVFk+WkRCQnN1XEMyZ3FNWFRKVCZEYmlZQmNgPyRfY04oVl1fUG5MKlBFMH4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMTMKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDYxIDAwMDAwIG4gCjAwMDAwMDAxMjIgMDAwMDAgbiAKMDAwMDAwMDIyOSAwMDAwMCBuIAowMDAwMDAwMzQxIDAwMDAwIG4gCjAwMDAwMDA1MzQgMDAwMDAgbiAKMDAwMDAwMDczMCAwMDAwMCBuIAowMDAwMDAwODQ1IDAwMDAwIG4gCjAwMDAwMDA5MjggMDAwMDAgbiAKMDAwMDAwMTE1NyAwMDAwMCBuIAowMDAwMDAxMjI2IDAwMDAwIG4gCjAwMDAwMDE1MDcgMDAwMDAgbiAKMDAwMDAwMTU2NyAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzwwOTQ1NGUxYzVlOWEwMGNhMjA0YzZhODA4NjQxNjY2ND48MDk0NTRlMWM1ZTlhMDBjYTIwNGM2YTgwODY0MTY2NjQ+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAob3BlbnNvdXJjZSkKCi9JbmZvIDEwIDAgUgovUm9vdCA5IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKMTA3MTUKJSVFT0YK" download="SardarAliShaik_Resume.pdf" class="btn-3d btn-3d-gold">⬇ Download Resume</a>
+    </div>
+    <br>
+    <p class="reveal contact-one-line" style="font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:0.15em; white-space:nowrap;">
+      📍 Hyderabad, India &nbsp;|&nbsp; Open to Remote, Hybrid &amp; Global Opportunities (Willing to relocate)
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="gold-line" style="width:220px; margin-bottom:20px;"></div>
+  <strong style="color:var(--gold-lt); font-size:13px; letter-spacing:0.06em;">SARDAR ALI SHAIK</strong>
+  <br><span style="font-size:11px; color:var(--muted); margin-top:6px; display:block; letter-spacing:0.06em;">
+    Program Manager &nbsp;·&nbsp; Senior Scrum Master &nbsp;·&nbsp; Agile Delivery Leader &nbsp;·&nbsp; QA &amp; Test Manager
+  </span>
+  <span style="font-size:11px; color:var(--muted); margin-top:12px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap; align-items:center;">
+    <a href="tel:+919000666007" style="color:var(--ice-dim); text-decoration:none; display:inline-flex; align-items:center; gap:5px;"><span style="color:#2ECC8A;">📞</span> (+91) 9000666007 (India)</a>
+    <span style="color:rgba(201,168,76,0.3);">·</span>
+    <a href="tel:+6589002404" style="color:var(--ice-dim); text-decoration:none; display:inline-flex; align-items:center; gap:5px;"><span style="color:#2ECC8A;">📞</span> (+65) 89002404 (Singapore)</a>
+    <span style="color:rgba(201,168,76,0.3);">·</span>
+    <a href="mailto:sardarali.shaik@outlook.in" style="color:var(--ice-dim); text-decoration:none; display:inline-flex; align-items:center; gap:5px;"><span style="color:var(--gold);">✉</span> sardarali.shaik@outlook.in</a>
+  </span>
+</footer>
+
+<script>
+  // ── COUNTER ANIMATION ─────────────────────────────────────────
+  function animateCounter(el) {
+    const target    = parseInt(el.dataset.target);
+    const prefix    = el.dataset.prefix  || '';
+    const suffix    = el.dataset.suffix  || '';
+    const duration  = 1800;
+    const steps     = 60;
+    const interval  = duration / steps;
+    let   current   = 0;
+    const increment = target / steps;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = prefix + Math.floor(current) + suffix;
+    }, interval);
+  }
+
+  // Hero counters on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero-metric-val[data-target]').forEach(el => {
+      setTimeout(() => animateCounter(el), 1200);
+    });
+  });
+
+  // ── INTERSECTION OBSERVER ────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Band counters
+        const counter = entry.target.querySelector && entry.target.querySelector('.count[data-target]');
+        if (counter && !counter.dataset.animated) {
+          counter.dataset.animated = 'true';
+          animateCounter(counter);
+        }
+        if (entry.target.classList.contains('exec-metric-tile')) {
+          const c = entry.target.querySelector('.count');
+          if (c && !c.dataset.animated) { c.dataset.animated = 'true'; animateCounter(c); }
+        }
+        if (entry.target.classList.contains('impact-tile')) {
+          const c = entry.target.querySelector('[data-target]');
+          if (c && !c.dataset.animated) { c.dataset.animated = 'true'; animateCounter(c); }
+        }
+        if (entry.target.classList.contains('impact-categories')) {
+          entry.target.querySelectorAll('[data-target]').forEach(c => {
+            if (!c.dataset.animated) { c.dataset.animated = 'true'; animateCounter(c); }
+          });
+        }
+        if (entry.target.classList.contains('metric-cell')) {
+          const c = entry.target.querySelector('.count');
+          if (c && !c.dataset.animated) {
+            c.dataset.animated = 'true';
+            animateCounter(c);
+          }
+        }
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(
+    '.reveal, .timeline-item, .skill-card, .ach-card, .cert-card, .award-row, .metric-cell, .why-card, .program-card, .testi-card, .ats-block, .exec-card, .exec-metric-tile, .impact-tile, .impact-categories, .impact-category'
+  ).forEach(el => observer.observe(el));
+
+  // Stagger animations
+  document.querySelectorAll('.ach-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.07}s`; });
+  document.querySelectorAll('.exec-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.15}s`; });
+  document.querySelectorAll('.cert-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.07}s`; });
+  document.querySelectorAll('.award-row').forEach((el, i) => { el.style.transitionDelay = `${i * 0.09}s`; });
+  document.querySelectorAll('.skill-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.1}s`; });
+  document.querySelectorAll('.why-card').forEach((el, i)  => { el.style.transitionDelay = `${i * 0.12}s`; });
+  document.querySelectorAll('.program-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.12}s`; });
+  document.querySelectorAll('.testi-card').forEach((el, i) => { el.style.transitionDelay = `${i * 0.1}s`; });
+  document.querySelectorAll('.ats-block').forEach((el, i)  => { el.style.transitionDelay = `${i * 0.07}s`; });
+
+  // ── ACTIVE NAV HIGHLIGHT ─────────────────────────────────────
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) current = s.id; });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  });
+
+  // ── 3D TILT on hover (cards) ──────────────────────────────────
+  document.querySelectorAll('.why-card, .program-card, .ach-card, .cert-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width  - 0.5;
+      const y = (e.clientY - rect.top)  / rect.height - 0.5;
+      card.style.transform = `translateY(-6px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+</script>
+</body>
+</html>
